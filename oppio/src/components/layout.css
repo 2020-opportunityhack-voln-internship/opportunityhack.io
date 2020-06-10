@@ -2,6 +2,51 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+p {
+  font-family: sans-serif;
+}
+li {
+  font-family: sans-serif;
+}
+#topnav i {
+  float: right;
+  position: relative;
+  right: 10px;
+  top: 0;
+  line-height: 50px;
+  color: rgb(5, 143, 197);
+}
+#topnav {
+  width: 100%;
+  height: 50px;
+  background-color: #141414;
+  position: relative;
+  display: hidden;
+  top: 0px;
+  left: 0;
+}
+#nav_items {
+  position: relative;
+  right: 0;
+}
+#nav_items ul {
+  display: inline;
+  right: 0;
+}
+#nav_items ul li {
+  display: inline;
+  right: 0;
+}
+#logo_img {
+  height: 50px;
+  width: auto;
+  left: 0;
+  line-height: 40px;
+  position: relative;
 }
 body {
   margin: 0;
