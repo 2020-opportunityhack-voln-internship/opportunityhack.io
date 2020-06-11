@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 import TopNav from "../components/topnav"
+import Banner from "../components/homepage_banner"
 import { Helmet } from "react-helmet"
 
 const HomePage = () => (
@@ -17,6 +18,7 @@ const HomePage = () => (
   />
   </Helmet>
   <TopNav />
+  <Banner />
   </div>
   
 )
