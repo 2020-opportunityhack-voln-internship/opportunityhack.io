@@ -21,7 +21,7 @@ li {
 #topnav i {
   float: right;
   position: relative;
-  right: 10px;
+  right: 30px;
   top: 0;
   line-height: 50px;
   color: rgb(5, 143, 197);
@@ -79,14 +79,36 @@ li {
   height: auto;
   padding: 0;
   margin: 0;
-  background-color: red;
-  min-height: calc(100vh - 100px);
+  background-color: #141414;
   position: relative;
   top: 50px;
   left: 0;
+  z-index: 0;
+}
+#banner_img_under {
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  filter: blur(3px);
+  position: relative;
+  z-index: 1;
+}
+#banner_img_over {
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  z-index: 5;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 3px solid ghostwhite;
 }
 body {
   margin: 0;
+  position: relative;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
