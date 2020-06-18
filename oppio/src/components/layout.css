@@ -216,6 +216,41 @@ li {
   position: relative;
   top: 50px;
 }
+.solution {
+  width: 400px;
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  border: 1px solid #24292e;
+}
+.soln_desc {
+  text-align: left;
+  width: auto;
+  font-weight: lighter;
+  font-size: 16px;
+  margin: 5px auto;
+}
+@media(max-width: 900px){
+  .solution {
+    width: 90%;
+  }
+}
+#soln_wrap {
+  margin: auto;
+  position: relative;
+  width: auto;
+}
+.soln_logo {
+  background-color: #24292e;
+}
+.soln_title {
+  text-align: left;
+  width: auto;
+  font-weight: lighter;
+  font-size: 36px;
+  margin: 5px auto;
+  padding: 5px 0 10px 5px;
+}
 body {
   margin: 0;
   position: relative;

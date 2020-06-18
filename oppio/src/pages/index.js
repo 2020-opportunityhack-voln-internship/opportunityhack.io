@@ -9,8 +9,19 @@ import SEO from "../components/seo"
 import TopNav from "../components/topnav"
 import Banner from "../components/homepage_banner"
 import { Helmet } from "react-helmet"
+import { graphql } from "gatsby"
+import Img from "gatsby-image";
+import styled from "styled-components"
 
-const HomePage = () => (
+const ImgStyled = styled(Img)`
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 300px;
+`
+
+export default ({ data }) => {
+return (
   <div>
     <Helmet>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -60,11 +71,55 @@ const HomePage = () => (
   <div id='tool_section'>
 
   <h1 id='tool_heading'>Software Solutions</h1>
+  <center>
+  <div id='soln_wrap'>
+  {data.allMarkdownRemark.edges.map(({ node }) => (
 
+    <div class='solution'>
+      <div class='soln_logo'>
+        <ImgStyled fluid={node.frontmatter.image.childImageSharp.fluid} />
+      </div>
+      <p class='soln_title'>{node.frontmatter.title}</p>
+      <p class='soln_desc'>{node.frontmatter.description}</p>
+    </div>
+
+                
+  ))}
   </div>
-  
+  </center>
+  </div>
   </div>
   
 )
+  }
 
-export default HomePage
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            description
+            image{
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+            features
+          }
+          excerpt
+        }
+      }
+    }
+  }
+`
