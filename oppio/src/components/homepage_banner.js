@@ -4,7 +4,7 @@ import LogoImageOver from "../images/Logos/White/square_w.png"
 
 class Banner extends React.Component {
     scrollToTools(){
-        var topOfTools = document.querySelector('#banner_1').offsetTop - 50;
+        var topOfTools = document.querySelector('#tool_section').offsetTop - 50;
         window.scroll({top: topOfTools});
     }
     render(){

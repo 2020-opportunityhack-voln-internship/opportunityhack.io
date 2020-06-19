@@ -18,6 +18,7 @@ const ImgStyled = styled(Img)`
     height: auto;
     max-width: 100%;
     max-height: 300px;
+    margin: 0;
 `
 
 export default ({ data }) => {
@@ -71,22 +72,26 @@ return (
   <div id='tool_section'>
 
   <h1 id='tool_heading'>Software Solutions</h1>
-  <center>
   <div id='soln_wrap'>
   {data.allMarkdownRemark.edges.map(({ node }) => (
-
     <div class='solution'>
       <div class='soln_logo'>
-        <ImgStyled fluid={node.frontmatter.image.childImageSharp.fluid} />
+        <ImgStyled fluid={node.frontmatter.image.childImageSharp.fluid}/>
       </div>
       <p class='soln_title'>{node.frontmatter.title}</p>
       <p class='soln_desc'>{node.frontmatter.description}</p>
+      {
+        (node.frontmatter.features).map((data) =>
+          <div class='feature'>
+            <i class='material-icons'>add</i>    
+            <p>{data}</p>
+          </div>
+        )
+      }
     </div>
-
                 
   ))}
   </div>
-  </center>
   </div>
   </div>
   
@@ -110,7 +115,7 @@ export const query = graphql`
             description
             image{
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 400) {
                   ...GatsbyImageSharpFluid
                 }
               }
