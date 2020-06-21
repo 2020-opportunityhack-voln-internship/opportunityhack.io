@@ -1,5 +1,6 @@
 import React from "react"
-import Logo from "../images/Logos/Pal_Blue/Banner_Pal_Blue.png"
+import Logo from "../../banner_w.png"
+import BannerImage from "../images/banner_img.jpg"
 
 class TopNav extends React.Component {
     toggleMenu(){

@@ -12,7 +12,7 @@ class Banner extends React.Component {
             <div id='homepage_banner'>
                 <img id='banner_img_under' src={BannerImage}></img>
                 <div id='inner_banner'>
-                    <div id='blur_banner'></div>
+                    <div class='blur_banner'></div>
                     <img id='banner_img_over' src={LogoImageOver}></img>
                     <p id='banner_scroll_btn' onClick={this.scrollToTools}>See our tools</p>
                 </div>

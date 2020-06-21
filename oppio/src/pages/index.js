@@ -16,9 +16,13 @@ import styled from "styled-components"
 const ImgStyled = styled(Img)`
     width: auto;
     height: auto;
-    max-width: 100%;
+    max-width: 95%;
     max-height: 300px;
-    margin: 0;
+    min-height: 1px;
+    min-width: 1px;
+    margin: auto;
+    padding: 0;
+    background-color: #24292e;
 `
 
 export default ({ data }) => {
@@ -30,12 +34,15 @@ return (
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
   />
+  <title>OpportunityHack</title>
   </Helmet>
+
   <TopNav />
   <Banner />
 
   <div id='banner_1' class='info_banner'>
     <h1 class='banner_heading'>What is OpportunityHack?</h1>
+    <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
 
@@ -45,6 +52,7 @@ return (
 
   <div id='banner_2' class='info_banner'>
     <h1 class='banner_heading'>We use Heroku!</h1>
+    <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
    
     <a class='banner_link' href='/'>Learn more</a>
@@ -58,6 +66,7 @@ return (
 
   <div id='banner_3' class='info_banner'>
     <h1 class='banner_heading'>We believe in open-source projects.</h1>
+    <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
    
     <a class='banner_link' href='/'>Learn more</a>
@@ -72,14 +81,21 @@ return (
   <div id='tool_section'>
 
   <h1 id='tool_heading'>Software Solutions</h1>
+
+  <div class='small_border gray'></div>
+
   <div id='soln_wrap'>
+  
   {data.allMarkdownRemark.edges.map(({ node }) => (
     <div class='solution'>
       <div class='soln_logo'>
+
         <ImgStyled fluid={node.frontmatter.image.childImageSharp.fluid}/>
+        
       </div>
+
       <p class='soln_title'>{node.frontmatter.title}</p>
-      <p class='soln_desc'>{node.frontmatter.description}</p>
+      <p class='soln_desc'>{node.frontmatter.mini_description}<a class='learn_link' href={node.fields.slug}><p class='learn_more_link'>Learn more</p></a></p><br></br>
       {
         (node.frontmatter.features).map((data) =>
           <div class='feature'>
@@ -88,8 +104,23 @@ return (
           </div>
         )
       }
-    </div>
-                
+      <br></br>
+
+      <a href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
+      <div class='github_link_element'>
+          <img src={GithubLogo}></img>
+          <p>View GitHub</p>
+      </div>
+      </a>
+
+      <a href={node.frontmatter.heroku_link} class={node.frontmatter.heroku_link === "" ? 'hidden' : 'shown'}>
+      <div class='heroku_link_element'>
+          <img src='https://brand.heroku.com/static/media/heroku-logotype-vertical.f7e1193f.svg'></img>
+          <p>View Heroku</p>
+      </div>
+      </a>
+
+    </div>  
   ))}
   </div>
   </div>
@@ -112,7 +143,8 @@ export const query = graphql`
           id
           frontmatter {
             title
-            description
+            mini_description
+            full_description
             image{
               childImageSharp {
                 fluid(maxWidth: 400) {
@@ -121,6 +153,12 @@ export const query = graphql`
               }
             }
             features
+            github_link
+            youtube_link
+            heroku_link
+          }
+          fields{
+            slug
           }
           excerpt
         }

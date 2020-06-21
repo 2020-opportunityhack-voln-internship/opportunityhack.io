@@ -26,16 +26,15 @@ li {
   right: 30px;
   top: 0;
   line-height: 50px;
-  color: rgb(5, 143, 197);
+  color: ghostwhite;
   cursor: pointer;
 }
 #topnav i:hover {
-  color: ghostwhite;
+  color: #50a6fc;
 }
 #topnav {
   width: 100%;
   height: 50px;
-  background-color: #141414;
   position: fixed;
   display: hidden;
   top: 0px;
@@ -43,6 +42,20 @@ li {
   box-shadow: 1px 2px 5px #141414;
   opacity: 1;
   z-index: 3;
+  background-color: #24292e;
+}
+.small_border {
+  width: 100px;
+  height: 1px;
+  position: relative;
+  margin: 15px auto;
+  border-bottom: 1px solid dimgray;
+}
+.gray {
+  border-color: #24292e;
+}
+.white {
+  border-color: ghostwhite;
 }
 #nav_items {
   position: fixed;
@@ -83,13 +96,13 @@ li {
   height: auto;
   padding: 0;
   margin: 0;
-  background-color: #141414;
+  background-color: ghostwhite;
   position: relative;
   top: 50px;
   left: 0;
   z-index: 0;
 }
-#blur_banner {
+.blur_banner {
   width: 100%;
   height: 100%;
   z-index: 3;
@@ -146,7 +159,7 @@ li {
   margin: 0;
   width: 100%;
   height: auto;
-  top: 50px;
+  top: 43px;
   position: relative;
 }
 .info_banner p {
@@ -215,6 +228,7 @@ li {
   padding: 10px;
   position: relative;
   top: 50px;
+  background-color: ghostwhite;
 }
 .solution {
   width: 400px;
@@ -232,7 +246,7 @@ li {
   font-weight: lighter;
   font-size: 16px;
   margin: 5px auto;
-  padding: 10px 0 10px 10px;
+  padding: 15px 0 15px 15px;
 }
 @media(max-width: 900px){
   .solution {
@@ -249,6 +263,7 @@ li {
 }
 .soln_logo {
   background-color: #24292e;
+  padding: 20px 0;
 }
 .soln_title {
   text-align: left;
@@ -256,12 +271,13 @@ li {
   font-weight: lighter;
   font-size: 36px;
   margin: 5px auto;
-  padding: 10px 0 10px 5px;
+  padding: 15px 0 15px 10px;
+  line-height: 40px;
 }
 .feature {
   width: 350px;
   height: auto;
-  min-height: 50px;
+  min-height: 30px;
   background-color: rgb(65, 156, 65);
   position: relative;
   display: table;
@@ -271,9 +287,9 @@ li {
   box-shadow: 1px 2px 4px dimgray;
 }
 .feature i {
-  width: 50px;
+  width: 30px;
   height: auto;
-  min-height: 50px;
+  min-height: 30px;
   color: rgb(123, 190, 103);
   margin: 0;
   padding: 0;
@@ -282,10 +298,10 @@ li {
   top: 50%;
   left: 0;
   transform: translateY(-50%);
-  line-height: 50px;
+  line-height: 30px;
 }
 .feature p {
-  min-height: 50px;
+  min-height: 30px;
   width: 300px;
   height: auto;
   color: rgb(184, 226, 172);
@@ -294,7 +310,92 @@ li {
   padding: 10px;
   font-weight: lighter;
   font-size: 16px;
+  line-height: 30px;
+}
+.learn_link {
+  text-decoration: none;
+  width: 100px;
+}
+.learn_more_link {
+  color: #4499ee;
+  text-decoration: underline;
+  width: 100px;
+}
+.learn_more_link:hover {
+  color: #0c59a5;
+}
+.github_link_element {
+  background-color: #24292e;
+  padding: 10px;
+  position: relative;
+  width: 80%;
+  float: left;
+  height: 70px;
+  left: 10px;
+  margin-bottom: 10px;
+}
+.github_link_element:hover {
+  background-color: #242323;
+  box-shadow: 1px 2px 4px dimgray;
+}
+.github_link_element img {
+  width: auto;
+  height: 50px;
+  position: relative;
+  float: left;
+  max-width: 100px;
+}
+.github_link_element p {
+  width: auto;
+  position: relative;
+  float: right;
+  color: ghostwhite;
+  height: 50px;
   line-height: 50px;
+  font-weight: lighter;
+  right: 100px;
+}
+
+.heroku_link_element {
+  background-color: #5c5cbd;
+  padding: 10px;
+  position: relative;
+  width: 80%;
+  float: left;
+  height: 70px;
+  left: 10px;
+  margin-bottom: 10px;
+}
+.heroku_link_element:hover {
+  background-color: #6666cf;
+  box-shadow: 1px 2px 4px dimgray;
+}
+.heroku_link_element img {
+  width: auto;
+  height: 50px;
+  position: relative;
+  float: left;
+  max-width: 100px;
+}
+.heroku_link_element p {
+  width: auto;
+  position: relative;
+  float: right;
+  color: ghostwhite;
+  height: 50px;
+  line-height: 50px;
+  font-weight: lighter;
+  right: 100px;
+}
+.details_wrapper {
+  position: relative;
+  top: 50px;
+  background-color: red;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 0;
+  min-height: calc(100vh - 100px);
 }
 body {
   margin: 0;
