@@ -178,6 +178,8 @@ li {
   display: inline-block;
   font-family: sans-serif;
   margin: 10px 10px;
+  cursor: pointer;
+  text-decoration: underline;
 }
 .banner_heading {
   font-weight: lighter;
@@ -186,7 +188,7 @@ li {
   max-width: 600px;
   text-align: center;
   color: ghostwhite;
-  padding: 10px;
+  padding: 30px 10px 10px 10px;
   font-size: 54px;
   word-wrap: normal;
 }
@@ -209,6 +211,12 @@ li {
 }
 #banner_3 {
   background-color: #24292e;
+}
+#banner_4 {
+  background-color: rgb(41, 152, 196);
+}
+#banner_5 {
+  background-color: rgb(67, 194, 124);
 }
 #heroku_logo {
   width: 150px;
@@ -312,6 +320,46 @@ li {
   font-size: 16px;
   line-height: 30px;
 }
+
+.feature_detail {
+  width: 350px;
+  height: auto;
+  min-height: 30px;
+  position: relative;
+  display: table;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 0;
+  border: 1px solid ghostwhite;
+}
+.feature_detail i {
+  width: 30px;
+  height: auto;
+  min-height: 30px;
+  color: ghostwhite;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  line-height: 30px;
+}
+.feature_detail p {
+  min-height: 30px;
+  width: 300px;
+  height: auto;
+  color: ghostwhite;
+  float: right;
+  margin: 0;
+  padding: 10px;
+  font-weight: lighter;
+  font-size: 16px;
+  line-height: 30px;
+  text-align: left;
+}
+
 .learn_link {
   text-decoration: none;
   width: 100px;
@@ -333,6 +381,7 @@ li {
   height: 70px;
   left: 10px;
   margin-bottom: 10px;
+  max-width: 400px;
 }
 .github_link_element:hover {
   background-color: #242323;
@@ -355,7 +404,18 @@ li {
   font-weight: lighter;
   right: 100px;
 }
-
+.detail_link_ext {
+  border: 1px solid ghostwhite;
+  padding: 20px;
+  color: ghostwhite;
+  margin: 0 10px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-decoration: none;
+}
+.detail_link_ext:hover {
+  text-decoration: underline;
+}
 .heroku_link_element {
   background-color: #5c5cbd;
   padding: 10px;
@@ -389,13 +449,24 @@ li {
 }
 .details_wrapper {
   position: relative;
-  top: 50px;
-  background-color: red;
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 0;
+  padding: 0px 0;
   min-height: calc(100vh - 100px);
+}
+.banner_link:hover {
+  color: skyblue;
+}
+.embed_video {
+  width: 800px;
+  height: 450px;
+}
+@media (max-width: 900px){
+  .embed_video {
+    width: 400px;
+    height: 200px;
+  }
 }
 body {
   margin: 0;

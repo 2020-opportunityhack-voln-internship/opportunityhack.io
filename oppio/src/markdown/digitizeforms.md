@@ -5,7 +5,7 @@ full_description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed 
 image: "./banner_w.png"
 features: ['Free to use for everyone!', 'Fast and simple setup process!']
 github_link: "https://github.com/2020-opportunityhack-voln-internship/opportunityhack.io"
-youtube_link: "https://www.youtube.com/watch?v=4CgGjA3e__0"
+youtube_link: "https://www.youtube.com/embed/nbSiHcluI9E"
 heroku_link: "heroku.com"
 
 ---

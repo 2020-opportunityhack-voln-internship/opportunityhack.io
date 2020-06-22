@@ -35,7 +35,16 @@
 
 module.exports = {
   siteMetadata: {
-      title: `PayPal Store`,
+      title: `OpportunityHack`,
+      youtube_link: ``,
+      github_link: ``,
+      heroku_link: ``,
+      instagram_link: ``,
+      facebook_link: ``,
+      snapchat_link: ``,
+      linkedin_link: ``,
+      twitter_link:  ``,
+      email_address: ``,
   },
   plugins: [
       {
@@ -62,6 +71,6 @@ module.exports = {
                ],
           },
       },
-      
+
   ],
 }
