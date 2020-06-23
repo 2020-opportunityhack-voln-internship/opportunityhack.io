@@ -145,6 +145,10 @@ return (
     </p>
   </div>
 
+  <div id='banner_3' class='info_banner'>
+    <h1 class='banner_heading'>FOOTER</h1>
+  </div>
+
   </div>
   
 )
