@@ -383,6 +383,7 @@ li {
   height: 70px;
   margin-bottom: 10px;
   max-width: 400px;
+  border-radius: 5px;
 }
 .github_link_element:hover {
   background-color: #242323;
@@ -425,6 +426,7 @@ li {
   float: left;
   height: 70px;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 .heroku_link_element:hover {
   background-color: #6666cf;

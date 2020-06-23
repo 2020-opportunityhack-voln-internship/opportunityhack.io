@@ -51,7 +51,7 @@ return (
   </div>
 
   <div id='banner_2' class='info_banner'>
-    <h1 class='banner_heading'>We use Heroku!</h1>
+    <h1 class='banner_heading'>We use Heroku to deploy our solutions.</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
    
@@ -76,6 +76,14 @@ return (
     <img id='github_logo' src={GithubLogo}></img>
 
    </p>
+  </div>
+
+  <div id='banner_4' class='info_banner'>
+    <h1 class='banner_heading'>What's happening with OpportunityHack?</h1>
+    <div class='small_border white'></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<a class='banner_link' href='/'>View posts</a><br></br>
+    <br></br>
+    </p>
   </div>
 
   <div id='tool_section'>
@@ -119,11 +127,24 @@ return (
           <p>View Heroku</p>
       </div>
       </a>
-
+      
     </div>  
   ))}
+
   </div>
+
+  <br></br>
+
   </div>
+
+  <div id='banner_5' class='info_banner'>
+    <h1 class='banner_heading'>Donations are your Opportunity to contribute!</h1>
+    <div class='small_border white'></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
+    <br></br>
+    </p>
+  </div>
+
   </div>
   
 )
