@@ -248,7 +248,8 @@ li {
   max-width: 400px;
   padding-bottom: 20px;
   border-radius: 0px;
-  box-shadow: 2px 0px 5px #d1d1d1;
+  box-shadow: 0px 0px 5px #d1d1d1;
+  padding: 20px;
 }
 .soln_desc {
   text-align: left;
@@ -256,7 +257,6 @@ li {
   font-weight: lighter;
   font-size: 16px;
   margin: 5px auto;
-  padding: 15px 0 15px 15px;
 }
 @media(max-width: 900px){
   .solution {
@@ -281,20 +281,20 @@ li {
   font-weight: lighter;
   font-size: 36px;
   margin: 5px auto;
-  padding: 15px 0 15px 10px;
   line-height: 40px;
+  padding-bottom: 20px;
 }
 .feature {
-  width: 350px;
+  width: 320px;
   height: auto;
   min-height: 30px;
   background-color: rgb(65, 156, 65);
   position: relative;
   display: table;
-  left: 10px;
   margin-bottom: 10px;
   padding: 0;
   box-shadow: 1px 2px 4px dimgray;
+  border-radius: 5px;
 }
 .feature i {
   width: 30px;
@@ -312,7 +312,7 @@ li {
 }
 .feature p {
   min-height: 30px;
-  width: 300px;
+  width: 270px;
   height: auto;
   color: rgb(184, 226, 172);
   float: right;
@@ -381,7 +381,6 @@ li {
   width: 80%;
   float: left;
   height: 70px;
-  left: 10px;
   margin-bottom: 10px;
   max-width: 400px;
 }
@@ -425,7 +424,6 @@ li {
   width: 80%;
   float: left;
   height: 70px;
-  left: 10px;
   margin-bottom: 10px;
 }
 .heroku_link_element:hover {
