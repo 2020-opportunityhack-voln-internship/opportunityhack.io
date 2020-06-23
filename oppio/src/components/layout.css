@@ -243,10 +243,12 @@ li {
   display: inline-block;
   margin: 10px;
   position: relative;
-  border: 1px solid #24292e;
+  border: 1px solid #e0e0e0;
   min-width: 400px;
   max-width: 400px;
   padding-bottom: 20px;
+  border-radius: 0px;
+  box-shadow: 2px 0px 5px #d1d1d1;
 }
 .soln_desc {
   text-align: left;
@@ -270,7 +272,7 @@ li {
   justify-content: center;
 }
 .soln_logo {
-  background-color: #24292e;
+  background-color: ghostwhite;
   padding: 20px 0;
 }
 .soln_title {

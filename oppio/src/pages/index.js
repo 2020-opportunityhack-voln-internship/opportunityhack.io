@@ -17,12 +17,12 @@ const ImgStyled = styled(Img)`
     width: auto;
     height: auto;
     max-width: 95%;
-    max-height: 300px;
+    max-height: 400px;
     min-height: 1px;
     min-width: 1px;
     margin: auto;
     padding: 0;
-    background-color: #24292e;
+    background-color: ghostwhite;
 `
 
 export default ({ data }) => {
@@ -147,7 +147,7 @@ export const query = graphql`
             full_description
             image{
               childImageSharp {
-                fluid(maxWidth: 400) {
+                fluid(maxWidth: 2428) {
                   ...GatsbyImageSharpFluid
                 }
               }

@@ -17,15 +17,17 @@ const ImgStyled = styled(Img)`
     width: auto;
     height: auto;
     max-width: 400px;
-    max-height: 300px;
+    max-height: 400px;
     min-height: 1px;
     min-width: 1px;
     margin: auto;
     padding: 0;
 `
 
+
 export default ({ data }) => {
     const post = data.markdownRemark;
+    var numFeatures = post.frontmatter.features.length;
     function scrollToTools(){
       var topOfTools = document.querySelector('#banner_3').offsetTop - 50;
       window.scroll({top: topOfTools});
@@ -63,8 +65,10 @@ export default ({ data }) => {
                 <i class='material-icons'>add</i>    
                 <p>{data}</p>
               </div>
+              
               )
             }
+            {numFeatures === 0 ? <p>No features were added to this software.</p> : <div></div>}
             <br></br>
           </div>
 
@@ -75,9 +79,8 @@ export default ({ data }) => {
             <div class='small_border white'></div>
             <br></br>
             {
-              post.frontmatter.youtube_link === "" ? <p>We're sorry, there is no tutorial for this video yet. Stay tuned.</p> : <center><iframe class='embed_video' src={post.frontmatter.youtube_link} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+              post.frontmatter.youtube_link === "" ? <p>We're sorry, there is no tutorial for this video yet. Stay tuned.</p> : <center><iframe class='embed_video' src={post.frontmatter.youtube_link} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture, fullscreen" allowfullscreen></iframe></center>
             }
-            <ImgStyled fluid={post.frontmatter.image.childImageSharp.fluid}/>
             <br></br>
           </div>
 
