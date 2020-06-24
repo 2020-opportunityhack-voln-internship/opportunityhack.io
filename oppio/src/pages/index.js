@@ -81,7 +81,7 @@ return (
   <div id='banner_4' class='info_banner'>
     <h1 class='banner_heading'>What's happening with OpportunityHack?</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<a class='banner_link' href='/'>View posts</a><br></br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<a class='banner_link' href='/opphacknews'>View posts</a><br></br>
     <br></br>
     </p>
   </div>
@@ -161,7 +161,11 @@ export const query = graphql`
         title
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark (
+      filter: {
+        fields: { collection: { eq: "solutions" } }
+      }
+    ) {
       totalCount
       edges {
         node {
