@@ -12,6 +12,9 @@ html {
 .shown {
   display: block;
 }
+#test {
+  color: black;
+}
 p {
   font-family: sans-serif;
   padding: 0;
@@ -173,6 +176,12 @@ li {
   font-weight: lighter;
   color: ghostwhite;
 }
+.detail_header {
+  color: #29242e;
+}
+.detail_header p {
+  color: #29242e;
+}
 .banner_link {
   color: ghostwhite;
   display: inline-block;
@@ -180,6 +189,20 @@ li {
   margin: 10px 10px;
   cursor: pointer;
   text-decoration: underline;
+  font-weight: lighter;
+}
+.banner_link:hover {
+  color: rgb(0, 217, 255);
+}
+#banner_link {
+  color: rgb(0, 217, 255);
+  display: inline-block;
+  font-family: sans-serif;
+  margin: 10px 10px;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: lighter;
+  
 }
 .banner_heading {
   font-weight: lighter;
@@ -457,8 +480,8 @@ li {
   padding: 0px 0;
   min-height: calc(100vh - 100px);
 }
-.banner_link:hover {
-  color: skyblue;
+#banner_link:hover {
+  color: rgb(128, 151, 255);
 }
 .embed_video {
   width: 800px;
@@ -469,6 +492,36 @@ li {
     width: 400px;
     height: 200px;
   }
+}
+.graytext {
+  color: #24292e;
+}
+.push_down {
+  margin-top: 70px;
+  position: relative;
+}
+.posting {
+  width: 80%;
+  box-shadow: 0 0 4px #24292e;
+  padding: 20px;
+  margin: 20px auto;
+  position: relative;
+  border-radius: 5px;
+}
+#post_body {
+  min-height: 1000px;
+  padding: 0;
+  height: auto;
+  margin-top: 70px;
+}
+.footer {
+  position: relative;
+  bottom: 0;
+  background-color: #24292e;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 20px;
 }
 body {
   margin: 0;

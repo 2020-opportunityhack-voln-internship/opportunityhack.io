@@ -27,7 +27,7 @@ const ImgStyled = styled(Img)`
 
 export default ({ data }) => {
 return (
-  <div>
+  <div id='post_body' class='push_down'>
     <Helmet>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link
@@ -41,13 +41,15 @@ return (
   
   {data.allMarkdownRemark.edges.map(({ node }) => (
     <div>
-        <div id='banner_1' class='info_banner'>
-            <p>
-                {node.frontmatter.title}
-            </p>
-        </div>
+      <div class='posting'>
+        <p>{node.frontmatter.title}</p>
+      </div>
     </div>
   ))}
+
+  <div class='footer'>
+    <h1>FOOTER</h1>
+  </div>
 
   </div>
   
@@ -57,6 +59,7 @@ return (
 export const query = graphql`
   query {
     allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
       filter: {
         fields: { collection: { eq: "posts" } }
       }
@@ -65,6 +68,7 @@ export const query = graphql`
         node {
             frontmatter {
                 title
+                date(formatString: "MMMM DD, YYYY")
             }
         }
       }

@@ -41,18 +41,19 @@ export default ({ data }) => {
           </Helmet>
           <TopNav />
           <div class='details_wrapper'>
-            <div id='banner_1' class='info_banner'>
-              <h1 class='banner_heading'>{post.frontmatter.title}</h1>
-              <div class='small_border white'></div>
+            <div class='detail_header info_banner'>
+              <br></br>
+              <h1 class='banner_heading graytext'>{post.frontmatter.title}</h1>
+              <div class='small_border gray'></div>
+              <br></br>
               <ImgStyled fluid={post.frontmatter.image.childImageSharp.fluid}/>
               <p>
-                {post.frontmatter.full_description}
-                <br></br><br></br>
-   
-            <p class='banner_link' onClick={scrollToTools}>View tutorial</p>
-            <br></br></p>
-
-
+                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+              </p>
+              <center>
+                <a id='banner_link' onClick={scrollToTools}>View tutorial</a>
+              </center>
+              <br></br>
           </div>
 
           <div id='banner_4' class='info_banner'>
@@ -120,12 +121,16 @@ export default ({ data }) => {
 
 export const query = graphql`
   query($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
+    markdownRemark(fields: { 
+        slug: { eq: $slug }
+        collection: { eq: "solutions" }
+        }
+        ) 
+      {
       html
       frontmatter {
         title
         mini_description
-        full_description
         image{
           childImageSharp {
             fluid(maxWidth: 400) {

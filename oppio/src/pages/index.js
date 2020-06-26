@@ -101,7 +101,6 @@ return (
         <ImgStyled fluid={node.frontmatter.image.childImageSharp.fluid}/>
         
       </div>
-
       <p class='soln_title'>{node.frontmatter.title}</p>
       <p class='soln_desc'>{node.frontmatter.mini_description}<a class='learn_link' href={node.fields.slug}><p class='learn_more_link'>Learn more</p></a></p><br></br>
       {
@@ -170,10 +169,10 @@ export const query = graphql`
       edges {
         node {
           id
+          html
           frontmatter {
             title
             mini_description
-            full_description
             image{
               childImageSharp {
                 fluid(maxWidth: 2428) {
