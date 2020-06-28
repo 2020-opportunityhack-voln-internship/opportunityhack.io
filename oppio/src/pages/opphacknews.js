@@ -16,13 +16,9 @@ import styled from "styled-components"
 const ImgStyled = styled(Img)`
     width: auto;
     height: auto;
-    max-width: 95%;
-    max-height: 400px;
-    min-height: 1px;
-    min-width: 1px;
-    margin: auto;
-    padding: 0;
-    background-color: ghostwhite;
+    margin: 10px;
+    max-width: 30%;
+    max-height: 300px;
 `
 
 export default ({ data }) => {
@@ -42,7 +38,17 @@ return (
   {data.allMarkdownRemark.edges.map(({ node }) => (
     <div>
       <div class='posting'>
-        <p>{node.frontmatter.title}</p>
+        <p class='post_title'>{node.frontmatter.title}</p>
+        <div class='images_area'>
+            {
+              (node.frontmatter.images).map((data) =>
+                <div class='post_img_container'>
+                  <Img className='f' fluid={data.childImageSharp.fluid}></Img>
+                </div>
+              )
+            }
+        </div>
+
       </div>
     </div>
   ))}
@@ -66,9 +72,17 @@ export const query = graphql`
     ) {
       edges {
         node {
+            html
             frontmatter {
                 title
                 date(formatString: "MMMM DD, YYYY")
+                images {
+                  childImageSharp {
+                    fluid(maxWidth: 2428) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
             }
         }
       }

@@ -502,11 +502,9 @@ li {
 }
 .posting {
   width: 80%;
-  box-shadow: 0 0 4px #24292e;
-  padding: 20px;
+  box-shadow: 0 0 4px dimgray;
   margin: 20px auto;
   position: relative;
-  border-radius: 5px;
 }
 #post_body {
   min-height: 1000px;
@@ -522,6 +520,30 @@ li {
   height: auto;
   margin: 0;
   padding: 20px;
+}
+.images_area {
+  width: auto;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+.post_img_container {
+  width: 350px;
+  height: auto;
+  position: relative;
+  padding: 10px;
+}
+.f {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+@media(max-width: 930px){
+  .post_img_container {
+    width: 85%;
+  }
 }
 body {
   margin: 0;
