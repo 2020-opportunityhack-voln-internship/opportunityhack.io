@@ -527,23 +527,128 @@ li {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 0px 50px 10px 50px;
 }
 .post_img_container {
-  width: 350px;
+  width: 300px;
   height: auto;
   position: relative;
-  padding: 10px;
+  padding: 0 10px;
 }
 .f {
   width: 100%;
   height: auto;
   position: relative;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.author_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  max-height: 100px;
+  max-width: 100px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 1px solid rgb(209, 209, 209);
+  box-shadow: 0 0 5px rgb(209, 209, 209);
+}
+.author_area {
+  width: 30%;
+  padding: 30px 0 1px 0;
+  position: relative;
+  background-color: ghostwhite;
+}
+.author_text {
+  width: auto;
+  max-width: 80%;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  color: #24292e;
+  font-weight: lighter;
+  margin: 0 auto;
+}
+.post_title {
+  width: 70%;
+  padding: 80px 60px 80px 60px;
+  font-size: 40px;
+  color: ghostwhite;
+  line-height: 45px;
+  position: relative;
+  background-color: #24292e;
+  border-bottom-right-radius: 10px;
+  word-wrap: normal;
+}
+.post_title_area {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+}
+.post_body {
+  width: 100%;
+  padding: 40px 120px 10px 60px;
+  font-weight: lighter;
+  color: #24292e;
+  word-wrap: normal;
+}
+.date {
+  font-weight: bold;
+  color: rgb(151, 151, 151);
+  font-size: 14px;
+}
+.related_links {
+  width: 100%;
+  height: auto;
+  padding: 10px 60px;
+  margin-bottom: 30px;
+}
+#rel_link_title {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  text-decoration: underline;
+  margin-bottom: 5px;
+}
+.related_links a {
+  text-decoration: none;
+  color: rgb(0, 145, 202);
+}
+.related_links a:hover {
+  text-decoration: underline;
+  color: #1bbeff
 }
 @media(max-width: 930px){
   .post_img_container {
     width: 85%;
   }
+}
+@media(max-width: 690px){
+  .post_title {
+    width: 100%;
+    border-bottom-right-radius: 0;
+  }
+  .author_area {
+    width: 100%;
+  }
+  .post_title_area {
+    display: inline-block;
+  }
+  .post_body {
+    padding-right: 60px;
+  }
+}
+.post_end_img {
+  width: 50%;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 body {
   margin: 0;

@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image";
 import styled from "styled-components"
+import postLogo from "../../assets/blue3.png"
 
 const ImgStyled = styled(Img)`
     width: auto;
@@ -38,7 +39,41 @@ return (
   {data.allMarkdownRemark.edges.map(({ node }) => (
     <div>
       <div class='posting'>
-        <p class='post_title'>{node.frontmatter.title}</p>
+
+        <div class='post_title_area'>
+          <p class='post_title'>{node.frontmatter.title}</p>
+          <div class='author_area'>
+            <Img className='author_img' fluid={node.frontmatter.author_image.childImageSharp.fluid}></Img>
+            <p class='author_text'>{node.frontmatter.author}<br></br><span class='date'>{node.frontmatter.date}</span></p>
+          </div>
+        </div>
+        <div class='post_body' dangerouslySetInnerHTML={{__html: node.html}} />
+        
+        {
+          (node.frontmatter.post_links.length === 1 && node.frontmatter.post_links[0] === "NOLINK") === true 
+          
+          ? 
+          
+          <div></div>
+
+          :
+          
+          <div class='related_links'>
+            <p id='rel_link_title'>Related Links</p>
+            {
+              (node.frontmatter.post_links).map((data) =>
+                <div>
+                  <a href={data}>{data}</a>
+                  <br></br>
+                </div>
+              )
+            }
+          </div>
+
+        }
+
+        
+        
         <div class='images_area'>
             {
               (node.frontmatter.images).map((data) =>
@@ -48,6 +83,8 @@ return (
               )
             }
         </div>
+        
+        <img class='post_end_img' src={postLogo}></img>
 
       </div>
     </div>
@@ -83,9 +120,18 @@ export const query = graphql`
                     }
                   }
                 }
+                author
+                author_image {
+                  childImageSharp {
+                    fluid(maxWidth: 2428) {
+                      ...GatsbyImageSharpFluid
+                    }
+                  }
+                }
+                post_links
             }
+          }
         }
       }
     }
-  }
 `;

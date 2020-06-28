@@ -35,7 +35,7 @@
 
 module.exports = {
   siteMetadata: {
-      title: `OpportunityHack`,
+      title: `OpportunityHack.io`,
       youtube_link: ``,
       github_link: ``,
       heroku_link: ``,
