@@ -35,6 +35,10 @@ return (
   </Helmet>
 
   <TopNav />
+
+  <h1 class='banner_heading graytext'>OpportunityHack News</h1>
+  <div class='small_border gray'></div>
+  <br></br>
   
   {data.allMarkdownRemark.edges.map(({ node }) => (
     <div>

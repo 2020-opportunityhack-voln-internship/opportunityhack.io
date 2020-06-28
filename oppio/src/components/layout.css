@@ -501,7 +501,7 @@ li {
   position: relative;
 }
 .posting {
-  width: 80%;
+  width: 70%;
   box-shadow: 0 0 4px dimgray;
   margin: 20px auto;
   position: relative;
@@ -627,10 +627,11 @@ li {
     width: 85%;
   }
 }
-@media(max-width: 690px){
+@media(max-width: 900px){
   .post_title {
     width: 100%;
     border-bottom-right-radius: 0;
+    font-size: 30px;
   }
   .author_area {
     width: 100%;
