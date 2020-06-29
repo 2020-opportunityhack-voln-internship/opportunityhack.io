@@ -33,11 +33,12 @@ return (
     <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-  />
-  <title>OpportunityHack</title>
+    />
+    <title>OpportunityHack</title>
   </Helmet>
 
   <TopNav />
+  
   <Banner />
 
   <div id='banner_1' class='info_banner'>
