@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image";
 import styled from "styled-components"
+import Footer from "../components/footer"
 
 const ImgStyled = styled(Img)`
     width: auto;
@@ -42,7 +43,7 @@ return (
   <Banner />
 
   <div id='banner_1' class='info_banner'>
-    <h1 class='banner_heading'>What is OpportunityHack?</h1>
+    <h1 class='banner_heading'>What is OpportunityHack.io?</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
@@ -82,7 +83,7 @@ return (
   <div id='banner_4' class='info_banner'>
     <h1 class='banner_heading'>What's happening with OpportunityHack?</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br><a class='banner_link' href='/opphacknews'>View posts</a><br></br>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br><a class='banner_link' id='org_link' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity-Hack.org</a><br></br>
     <br></br>
     </p>
   </div>
@@ -105,13 +106,16 @@ return (
       <p class='soln_title'>{node.frontmatter.title}</p>
       <p class='soln_desc'>{node.frontmatter.mini_description}<a class='learn_link' href={node.fields.slug}><p class='learn_more_link'>Learn more</p></a></p><br></br>
       {
-        (node.frontmatter.features).map((data) =>
-          <div class='feature'>
-            <i class='material-icons'>add</i>    
-            <p>{data}</p>
-          </div>
-        )
+        (node.frontmatter.features.length === 1 && node.frontmatter.features[0] === 'NONE') === true ? "" : 
+          (node.frontmatter.features).map((data) =>
+            <div class='feature'>
+              <i class='material-icons'>add</i>    
+              <p>{data}</p>
+            </div>
+          )
+        
       }
+      
       <br></br>
 
       <a href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
@@ -145,8 +149,8 @@ return (
     </p>
   </div>
 
-  <div id='banner_3' class='info_banner'>
-    <h1 class='banner_heading'>FOOTER</h1>
+  <div class='footer'>
+    <Footer />
   </div>
 
   </div>

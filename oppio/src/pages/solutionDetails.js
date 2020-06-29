@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image";
 import styled from "styled-components"
+import Footer from "../components/footer"
 
 const ImgStyled = styled(Img)`
     width: auto;
@@ -38,6 +39,7 @@ export default ({ data }) => {
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
             <title>OpportunityHack</title>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
           </Helmet>
           <TopNav />
           <div class='details_wrapper'>
@@ -112,7 +114,9 @@ export default ({ data }) => {
                 </div>
               }
 
-            
+              <div class='footer'>
+                <Footer />
+              </div>
 
           </div>
 

@@ -22,8 +22,6 @@ const ImgStyled = styled(Img)`
     max-height: 300px;
 `
 
-alert(sessionStorage.getItem("SessionName"));
-
 export default ({ data }) => {
 return (
   <div id='post_body' class='push_down'>

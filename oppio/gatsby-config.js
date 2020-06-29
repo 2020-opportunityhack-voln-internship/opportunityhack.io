@@ -37,13 +37,13 @@ module.exports = {
   siteMetadata: {
       title: `OpportunityHack.io`,
       youtube_link: ``,
-      github_link: ``,
+      github_link: `https://www.google.com/url?q=https%3A%2F%2Fgithub.com%2Fopportunity-hack%2F&sa=D&sntz=1&usg=AFQjCNHtoXc70eubXzqbx-fXma6avLyFUw`,
       heroku_link: ``,
       instagram_link: ``,
-      facebook_link: ``,
+      facebook_link: `https://www.google.com/url?q=https%3A%2F%2Fwww.facebook.com%2FOpportunityHack%2F&sa=D&sntz=1&usg=AFQjCNGQRShJkb4DQA0YecRK-wGJQCOrcg`,
       snapchat_link: ``,
-      linkedin_link: ``,
-      twitter_link:  ``,
+      linkedin_link: `https://www.google.com/url?q=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fopportunity-hack%2F&sa=D&sntz=1&usg=AFQjCNH0aKOrU9P_7aNU762SgKvoDg3e2Q`,
+      twitter_link:  `https://www.google.com/url?q=https%3A%2F%2Ftwitter.com%2Fopportunityhack&sa=D&sntz=1&usg=AFQjCNH1Z3gfFO3MzFMcuNoscmhF_sqMdQ`,
       email_address: ``,
   },
   plugins: [
