@@ -29,12 +29,10 @@ const ImgStyled = styled(Img)`
 
 const responseGoogle = (response) => {
   console.log(response);
-  alert('success');
 }
 
 const failResponse = (response) => {
   console.log(response);
-  alert('failed');
 }
 
 export default ({ data }) => {
@@ -56,15 +54,6 @@ return (
   <TopNav />
   
   <Banner />
-
-  <GoogleLogin
-    clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
-    buttonText="Login"
-    onSuccess={responseGoogle}
-    onFailure={failResponse}
-    cookiePolicy={'single_host_origin'}
-    className='gbtn'
-  />
 
   <div id='banner_1' class='info_banner'>
     <h1 class='banner_heading'>What is OpportunityHack.io?</h1>

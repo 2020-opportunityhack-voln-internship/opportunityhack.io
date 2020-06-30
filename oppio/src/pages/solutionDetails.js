@@ -25,7 +25,6 @@ const ImgStyled = styled(Img)`
     padding: 0;
 `
 
-
 export default ({ data }) => {
     const post = data.markdownRemark;
     var numFeatures = post.frontmatter.features.length;
