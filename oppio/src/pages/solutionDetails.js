@@ -124,9 +124,9 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
-  query($slug: String!) {
+  query($path: String!) {
     markdownRemark(fields: { 
-        slug: { eq: $slug }
+        slug: { eq: $path }
         collection: { eq: "solutions" }
         }
         ) 
