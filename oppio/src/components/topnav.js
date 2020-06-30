@@ -30,7 +30,7 @@ class TopNav extends React.Component {
       {
         `
         function onSignIn(){
-          alert('bitch func');
+          alert('SUCCESS');
         }
         `
       }
