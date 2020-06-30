@@ -20,7 +20,6 @@ class TopNav extends React.Component {
         return (
             <div>
                 <div class='topnav'>
-                    <div class="g-signin2 gbtn" data-onsuccess="onSignIn" data-theme="light"></div>
                     <a href='/'><img id='logo_img' src={Logo}></img></a>
                 </div>
 

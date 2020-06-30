@@ -184,13 +184,6 @@ li {
   top: 8px;
   right: 10px;
   z-index: 200;
-  width: auto;
-}
-.g-signin2 {
-  position: fixed;
-  top: 8px;
-  right: 10px;
-  z-index: 200;
 }
 .detail_header p {
   color: #29242e;

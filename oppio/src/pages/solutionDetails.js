@@ -40,7 +40,9 @@ export default ({ data }) => {
             <title>OpportunityHack</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
           </Helmet>
+
           <TopNav />
+
           <div class='details_wrapper'>
             <div class='detail_header info_banner'>
               <br></br>
