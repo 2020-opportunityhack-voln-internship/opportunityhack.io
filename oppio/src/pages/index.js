@@ -33,10 +33,6 @@ export default ({ data }) => {
   
 return (
   <body>
-
-    <head>
-      
-    </head>
     
     <Helmet>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
@@ -49,17 +45,6 @@ return (
     <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
 
     <meta name="google-signin-scope" content="profile email" />
-
-    <script>
-      {
-        `
-        function onSignIn(){
-          alert('bitch func');
-        }
-        x();
-        `
-      }
-    </script>
     
   </Helmet>
 
@@ -69,7 +54,6 @@ return (
   <Banner />
 
   
-  <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
   
   <div id='banner_1' class='info_banner'>
     <h1 class='banner_heading'>What is OpportunityHack.io?</h1>
