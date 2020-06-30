@@ -2,7 +2,7 @@ import React from "react"
 import Logo from "../../banner_w.png"
 import BannerImage from "../images/banner_img.jpg"
 
-sessionStorage.username = "Not Logged In"
+sessionStorage.username = "Not Logged In";
 
 class TopNav extends React.Component {
     toggleMenu(){
@@ -21,6 +21,8 @@ class TopNav extends React.Component {
             <div>
                 <div id='topnav'>
                     <a href='/'><img id='logo_img' src={Logo}></img></a>
+                    
+                    <p id='message'>hhh</p>
                     <i class='material-icons' onClick={this.toggleMenu}>menu</i>    
                 </div>
 

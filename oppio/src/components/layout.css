@@ -179,6 +179,20 @@ li {
 .detail_header {
   color: #29242e;
 }
+#message {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  z-index: 100;
+  color: white;
+
+}
+.gbtn {
+  position: fixed;
+  top: 5px;
+  right: 70px;
+  z-index: 200;
+}
 .detail_header p {
   color: #29242e;
 }
