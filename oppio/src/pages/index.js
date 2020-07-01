@@ -13,6 +13,8 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image";
 import styled from "styled-components"
 import Footer from "../components/footer"
+import { GoogleLogin } from 'react-google-login';
+import { func } from "prop-types"
 
 const ImgStyled = styled(Img)`
     width: auto;
@@ -26,9 +28,12 @@ const ImgStyled = styled(Img)`
     background-color: ghostwhite;
 `
 
+
 export default ({ data }) => {
+  
 return (
-  <div>
+  <body>
+    
     <Helmet>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link
@@ -36,12 +41,20 @@ return (
     href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
     />
     <title>OpportunityHack</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
+
+    <meta name="google-signin-scope" content="profile email" />
+    
   </Helmet>
+
 
   <TopNav />
   
   <Banner />
 
+  
+  
   <div id='banner_1' class='info_banner'>
     <h1 class='banner_heading'>What is OpportunityHack.io?</h1>
     <div class='small_border white'></div>
@@ -79,6 +92,8 @@ return (
 
    </p>
   </div>
+
+  
 
   <div id='banner_4' class='info_banner'>
     <h1 class='banner_heading'>What's happening with OpportunityHack?</h1>
@@ -153,7 +168,7 @@ return (
     <Footer />
   </div>
 
-  </div>
+  </body>
   
 )
   }

@@ -1,8 +1,9 @@
 import React from "react"
 import Logo from "../../banner_w.png"
 import BannerImage from "../images/banner_img.jpg"
+import { Helmet } from "react-helmet"
 
-sessionStorage.username = "Not Logged In"
+sessionStorage.username = "Not Logged In";
 
 class TopNav extends React.Component {
     toggleMenu(){
@@ -19,9 +20,26 @@ class TopNav extends React.Component {
     render(){
         return (
             <div>
-                <div id='topnav'>
+<Helmet>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
+
+    <meta name="google-signin-scope" content="profile email" />
+
+    <script>
+      {
+        `
+        function onSignIn(){
+          alert('SUCCESS');
+        }
+        `
+      }
+    </script>
+    
+  </Helmet>
+<div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
+                <div class='topnav'>
                     <a href='/'><img id='logo_img' src={Logo}></img></a>
-                    <i class='material-icons' onClick={this.toggleMenu}>menu</i>    
                 </div>
 
                 <div id='nav_items' class='hidden animate__animated animate__slideInDown'>
