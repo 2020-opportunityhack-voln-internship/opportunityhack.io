@@ -1,6 +1,7 @@
 import React from "react"
 import BannerImage from "../images/banner_img.jpg"
 import LogoImageOver from "../images/Logos/White/square_w.png"
+import "./layout.css"
 
 class Banner extends React.Component {
     scrollToTools(){

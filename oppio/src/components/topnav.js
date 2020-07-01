@@ -1,6 +1,7 @@
 import React from "react"
 import Logo from "../../banner_w.png"
 import { Helmet } from "react-helmet"
+import "./layout.css"
 
 class TopNav extends React.Component {
     toggleMenu(){
