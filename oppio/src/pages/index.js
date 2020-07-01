@@ -1,11 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
 import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
 import OppLogo from "../images/Logos/White/banner_w.png"
-import SEO from "../components/seo"
 import TopNav from "../components/topnav"
 import Banner from "../components/homepage_banner"
 import { Helmet } from "react-helmet"
@@ -13,8 +8,6 @@ import { graphql } from "gatsby"
 import Img from "gatsby-image";
 import styled from "styled-components"
 import Footer from "../components/footer"
-import { GoogleLogin } from 'react-google-login';
-import { func } from "prop-types"
 
 const ImgStyled = styled(Img)`
     width: auto;

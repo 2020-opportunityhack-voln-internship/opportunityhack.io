@@ -1,6 +1,5 @@
 import React from "react"
 import Logo from "../../banner_w.png"
-import BannerImage from "../images/banner_img.jpg"
 import { Helmet } from "react-helmet"
 
 class TopNav extends React.Component {
@@ -35,7 +34,7 @@ class TopNav extends React.Component {
     </script>
     
   </Helmet>
-<div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
+                <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
                     <a href='/'><img id='logo_img' src={Logo}></img></a>
                 </div>
