@@ -54,7 +54,6 @@ return (
   <Banner />
 
   
-  
   <div id='banner_1' class='info_banner'>
     <h1 class='banner_heading'>What is OpportunityHack.io?</h1>
     <div class='small_border white'></div>

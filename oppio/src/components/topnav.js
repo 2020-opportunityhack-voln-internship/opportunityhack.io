@@ -3,8 +3,6 @@ import Logo from "../../banner_w.png"
 import BannerImage from "../images/banner_img.jpg"
 import { Helmet } from "react-helmet"
 
-sessionStorage.username = "Not Logged In";
-
 class TopNav extends React.Component {
     toggleMenu(){
         var nav = document.getElementById('nav_items');
