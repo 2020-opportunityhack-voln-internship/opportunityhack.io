@@ -4,7 +4,7 @@ import OppLogo from "../images/Logos/White/banner_w.png"
 import TopNav from "../components/topnav"
 import Banner from "../components/homepage_banner"
 import { Helmet } from "react-helmet"
-import { useStaticQuery , graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Img from "gatsby-image";
 import styled from "styled-components"
 import Footer from "../components/footer"
@@ -21,6 +21,7 @@ const ImgStyled = styled(Img)`
     padding: 0;
     background-color: ghostwhite;
 `
+
 
 export default ({ data }) => {
   
@@ -42,7 +43,7 @@ return (
   </Helmet>
 
 
-  <TopNav dat={data}/>
+  <TopNav />
   
   <Banner />
 
@@ -53,7 +54,7 @@ return (
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
 
-    <Img className='opp_logo' fluid={data.file.childImageSharp.fluid}></Img>
+    <img id='opp_logo' src={OppLogo}></img>
     </p>
   </div>
 
@@ -163,21 +164,10 @@ return (
   </body>
   
 )
-}
+  }
 
 export const query = graphql`
   query {
-    file(relativePath: { eq: "banner_w.png" }) {
-      childImageSharp {
-        fluid {
-          base64
-          aspectRatio
-          src
-          srcSet
-          sizes
-        }
-      }
-    }
     site {
       siteMetadata {
         title

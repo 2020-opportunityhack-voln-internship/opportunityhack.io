@@ -42,7 +42,7 @@ export default ({ data }) => {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
           </Helmet>
 
-          <TopNav />
+          <TopNav dat={data}/>
 
           <div class='details_wrapper'>
             <div class='detail_header info_banner'>
@@ -126,7 +126,15 @@ export default ({ data }) => {
 }
 
 export const query = graphql`
+
   query($path: String!) {
+    file(relativePath: { eq: "banner_w.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 2428) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     markdownRemark(fields: { 
         slug: { eq: $path }
         collection: { eq: "solutions" }
