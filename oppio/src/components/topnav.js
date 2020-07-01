@@ -2,6 +2,8 @@ import React from "react"
 import Logo from "../../banner_w.png"
 import { Helmet } from "react-helmet"
 import "./layout.css"
+import Img from "gatsby-image"
+import { useStaticQuery , graphql } from "gatsby"
 
 class TopNav extends React.Component {
     toggleMenu(){
@@ -37,7 +39,8 @@ class TopNav extends React.Component {
   </Helmet>
                 <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
-                    <a href='/'><img id='logo_img' src={Logo}></img></a>
+                    <a href='/'><Img className='logo_img' fluid={this.props.dat.file.childImageSharp.fluid}></Img></a>
+                    
                 </div>
 
                 <div id='nav_items' class='hidden animate__animated animate__slideInDown'>
@@ -51,5 +54,7 @@ class TopNav extends React.Component {
         )
     }
 }
+
+
 
 export default TopNav;

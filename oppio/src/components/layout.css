@@ -87,12 +87,13 @@ li {
   text-decoration: none;
   color: rgb(5, 143, 197);
 }
-#logo_img {
+.logo_img {
   height: 50px;
   width: auto;
   left: 0;
   line-height: 40px;
   position: relative;
+  max-width: 350px;
 }
 #homepage_banner {
   width: 100%;
@@ -254,8 +255,10 @@ li {
 #github_logo {
   width: 80px;
 }
-#opp_logo {
+.opp_logo {
   width: 400px;
+  margin: 0 auto;
+  position: relative;
 }
 #tool_section {
   width: 100%;
