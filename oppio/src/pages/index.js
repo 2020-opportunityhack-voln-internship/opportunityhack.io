@@ -23,11 +23,13 @@ const ImgStyled = styled(Img)`
     background-color: ghostwhite;
 `
 
-export default ({ data }) => {
-  function scrollToTools(){
-    var topOfTools = document.querySelector('#tool_section').offsetTop - 50;
-    window.scroll({top: topOfTools});
+function scrollToTools(){
+  var topOfTools = document.querySelector('#tool_section').offsetTop - 50;
+  window.scroll({top: topOfTools});
 }
+
+export default ({ data }) => {
+  
 return (
   <body>
     
@@ -57,7 +59,9 @@ return (
 
   <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
-                    <a href='/'><img id='logo_img' src={Logo}></img></a>
+                    <div class='logo_wrapper'>
+                      <img class='logo_image_nav' src='./banner_w.png'></img>
+                    </div>
                 </div>
 
                 <div id='nav_items' class='hidden animate__animated animate__slideInDown'>
@@ -70,10 +74,10 @@ return (
 
   
   <div id='homepage_banner'>
-  <img class='banner_img_under' src={bannerimg}></img>
+  <img class='banner_img_under' src='./bi.jpeg'></img>
                 <div id='inner_banner'>
                     <div class='blur_banner'></div>
-                    <img class='banner_img_over' src={bannerimgover}></img>
+                    <img class='banner_img_over' src='./square_w.png'></img>
                     <p id='banner_scroll_btn' onClick={scrollToTools}>See our tools</p>
                 </div>
             </div>
@@ -85,7 +89,7 @@ return (
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
 
-    <img class='logoimg' src={Logo}></img>
+    <img class='logoimg' src='./banner_w.png'></img>
     </p>
   </div>
 
@@ -238,3 +242,9 @@ export const query = graphql`
     }
   }
 `
+
+/*
+fluid(maxWidth: 5000, quality: 90) {
+          ...GatsbyImageSharpFluid
+        }
+*/

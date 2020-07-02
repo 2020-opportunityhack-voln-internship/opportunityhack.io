@@ -87,12 +87,25 @@ li {
   text-decoration: none;
   color: rgb(5, 143, 197);
 }
-#logo_img {
-  height: 50px;
-  width: auto;
+.logo_img {
   left: 0;
   line-height: 40px;
   position: relative;
+}
+.logo_wrapper {
+  height: auto;
+  width: auto;
+}
+.logo_image_nav {
+  position: relative;
+  left: 0;
+  top: 0;
+  height: 50px;
+  width: auto;
+}
+#logo_anc {
+  width: 350px;
+  height: 50px;
 }
 #homepage_banner {
   width: 100%;

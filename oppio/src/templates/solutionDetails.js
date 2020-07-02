@@ -131,7 +131,7 @@ export default ({ data }) => {
 export const query = graphql`
 
   query($path: String!) {
-    file(relativePath: { eq: "banner_w.png" }) {
+    file: file(relativePath: { eq: "banner_w.png" }) {
       childImageSharp {
         fluid(maxWidth: 2428) {
           ...GatsbyImageSharpFluid
