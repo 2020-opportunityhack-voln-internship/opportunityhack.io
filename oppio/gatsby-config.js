@@ -68,6 +68,26 @@ module.exports = {
               path: `${__dirname}/src/markdown`,
           },
     },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        rel: 'stylesheet',
+        src: 'https://fonts.googleapis.com/icon?family=Material+Icons'
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        rel: 'stylesheet',
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css'
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-load-script',
+      options: {
+        src: 'https://apis.google.com/js/platform.js'
+      },
+    },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
       `gatsby-image`,

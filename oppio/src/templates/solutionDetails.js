@@ -8,6 +8,7 @@ import Logo from "../../banner_w.png"
 import "../components/layout.css"
 import { Link } from "gatsby"
 
+
 const ImgStyled = styled(Img)`
     width: auto;
     height: auto;
@@ -29,10 +30,6 @@ export default ({ data }) => {
     return (
        <div>
           <Helmet>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
-            <title>OpportunityHack</title>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
     <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 
@@ -51,7 +48,7 @@ export default ({ data }) => {
           <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
                     <div class='logo_wrapper'>
-                      <Link to="/">
+                      <Link to="./index.html">
                       <img class='logo_image_nav' src='../banner_w.png'></img>
                       </Link>
                     </div>

@@ -12,6 +12,8 @@ import bannerimg from "../images/banner_img.jpg"
 import bannerimgover from "../images/square_w.png"
 import { Link } from "gatsby"
 
+
+
 const ImgStyled = styled(Img)`
     width: auto;
     height: auto;
@@ -35,16 +37,10 @@ return (
   <body>
     
     <Helmet>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-    />
     <title>OpportunityHack</title>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-
-    <meta name="google-signin-scope" content="profile email" />
-    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
+    
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"/>
     <script>
       {
         `
@@ -57,10 +53,11 @@ return (
     
   </Helmet>
 
+
   <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
                     <div class='logo_wrapper'>
-                      <Link to="/">
+                      <Link to="./index.html">
                       <img class='logo_image_nav' src='./banner_w.png'></img>
                       </Link>
                     </div>
@@ -145,8 +142,10 @@ return (
     <div class='solution'>
 
       <p class='soln_title'>{node.frontmatter.title}</p>
-      <p class='soln_desc'>{node.frontmatter.mini_description}</p><br></br>
-      <a href={'.' + node.fields.slug + 'index.html'}>LINK</a>
+      <p class='soln_desc'>{node.frontmatter.mini_description}</p>
+
+      <a class='learn_more_link' href={'.' + node.fields.slug + 'index.html'}>Learn more</a>
+      <br></br><br></br>
       {
         (node.frontmatter.features.length === 1 && node.frontmatter.features[0] === 'NONE') === true ? "" : 
           (node.frontmatter.features).map((data) =>
