@@ -112,7 +112,7 @@ li {
   position: absolute;
   backdrop-filter: blur(10px);
 }
-#banner_img_under {
+.banner_img_under {
   width: 100%;
   height: auto;
   padding: 0;
@@ -133,7 +133,7 @@ li {
   display: block;
   border: 3px solid ghostwhite;
 }
-#banner_img_over {
+.banner_img_over {
   position: relative;
   margin-left: auto;
   margin-right: auto;

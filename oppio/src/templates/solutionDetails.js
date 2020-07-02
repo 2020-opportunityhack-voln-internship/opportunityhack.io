@@ -1,18 +1,10 @@
 import React from "react"
-import { Link } from "gatsby"
-
-import Layout from "../components/layout"
-import Image from "../components/image"
-import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
-import OppLogo from "../images/Logos/White/banner_w.png"
-import SEO from "../components/seo"
-import TopNav from "../components/topnav"
-import Banner from "../components/homepage_banner"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Img from "gatsby-image";
 import styled from "styled-components"
 import Footer from "../components/footer"
+import Logo from "../../banner_w.png"
 import "../components/layout.css"
 
 const ImgStyled = styled(Img)`
@@ -42,7 +34,18 @@ export default ({ data }) => {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
           </Helmet>
 
-          <TopNav dat={data}/>
+          <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
+                <div class='topnav'>
+                    <a href='/'><img id='logo_img' src={Logo}></img></a>
+                </div>
+
+                <div id='nav_items' class='hidden animate__animated animate__slideInDown'>
+                    <ul>
+                        <a href='/'><li>Home</li></a>
+                        <a href='/'><li>News</li></a>
+                        <a href='/'><li>Developers</li></a>
+                    </ul>
+                </div>
 
           <div class='details_wrapper'>
             <div class='detail_header info_banner'>

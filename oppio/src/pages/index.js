@@ -1,14 +1,15 @@
 import React from "react"
 import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
 import OppLogo from "../images/Logos/White/banner_w.png"
-import TopNav from "../components/topnav"
-import Banner from "../components/homepage_banner"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import Img from "gatsby-image";
+import Img from "gatsby-image"
 import styled from "styled-components"
 import Footer from "../components/footer"
 import "../components/layout.css"
+import Logo from "../../banner_w.png"
+import bannerimg from "../images/banner_img.jpg"
+import bannerimgover from "../images/square_w.png"
 
 const ImgStyled = styled(Img)`
     width: auto;
@@ -22,9 +23,11 @@ const ImgStyled = styled(Img)`
     background-color: ghostwhite;
 `
 
-
 export default ({ data }) => {
-  
+  function scrollToTools(){
+    var topOfTools = document.querySelector('#tool_section').offsetTop - 50;
+    window.scroll({top: topOfTools});
+}
 return (
   <body>
     
@@ -39,13 +42,41 @@ return (
     <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
 
     <meta name="google-signin-scope" content="profile email" />
+
+    <script>
+      {
+        `
+        function onSignIn(){
+          alert('SUCCESS');
+        }
+        `
+      }
+    </script>
     
   </Helmet>
 
+  <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
+                <div class='topnav'>
+                    <a href='/'><img id='logo_img' src={Logo}></img></a>
+                </div>
 
-  <TopNav />
+                <div id='nav_items' class='hidden animate__animated animate__slideInDown'>
+                    <ul>
+                        <a href='/'><li>Home</li></a>
+                        <a href='/'><li>News</li></a>
+                        <a href='/'><li>Developers</li></a>
+                    </ul>
+                </div>
+
   
-  <Banner />
+  <div id='homepage_banner'>
+  <img class='banner_img_under' src={bannerimg}></img>
+                <div id='inner_banner'>
+                    <div class='blur_banner'></div>
+                    <img class='banner_img_over' src={bannerimgover}></img>
+                    <p id='banner_scroll_btn' onClick={scrollToTools}>See our tools</p>
+                </div>
+            </div>
 
   
   <div id='banner_1' class='info_banner'>
@@ -54,7 +85,7 @@ return (
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
 
-    <Img className='logoimg' fluid={data.file1.childImageSharp.fluid}></Img>
+    <img class='logoimg' src={Logo}></img>
     </p>
   </div>
 
@@ -168,13 +199,6 @@ return (
 
 export const query = graphql`
   query {
-    file1: file(relativePath: { eq: "banner_w.png" }) {
-      childImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     site {
       siteMetadata {
         title
