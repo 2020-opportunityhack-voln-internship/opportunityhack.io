@@ -60,6 +60,13 @@ module.exports = {
             name: `images`,
             path: `${__dirname}/src/images`,
         },
+      },
+        {
+          resolve: `gatsby-source-filesystem`,
+          options: {
+              name: `images_md`,
+              path: `${__dirname}/src/markdown`,
+          },
     },
       `gatsby-transformer-sharp`,
       `gatsby-plugin-sharp`,
@@ -72,7 +79,7 @@ module.exports = {
                   {
                       resolve: `gatsby-remark-images`,
                       options: {
-                          maxWidth: 5000,
+                          maxWidth: 270,
                       },
                   },
                   `gatsby-remark-copy-linked-files`,

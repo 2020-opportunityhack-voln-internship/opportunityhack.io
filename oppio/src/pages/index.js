@@ -10,6 +10,7 @@ import "../components/layout.css"
 import Logo from "../../banner_w.png"
 import bannerimg from "../images/banner_img.jpg"
 import bannerimgover from "../images/square_w.png"
+import { Link } from "gatsby"
 
 const ImgStyled = styled(Img)`
     width: auto;
@@ -41,10 +42,9 @@ return (
     />
     <title>OpportunityHack</title>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
 
     <meta name="google-signin-scope" content="profile email" />
-
+    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
     <script>
       {
         `
@@ -60,7 +60,9 @@ return (
   <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
                     <div class='logo_wrapper'>
+                      <Link to="/">
                       <img class='logo_image_nav' src='./banner_w.png'></img>
+                      </Link>
                     </div>
                 </div>
 
@@ -141,13 +143,10 @@ return (
   
   {data.allMarkdownRemark.edges.map(({ node }) => (
     <div class='solution'>
-      <div class='soln_logo'>
 
-        <ImgStyled fluid={node.frontmatter.image.childImageSharp.fluid}/>
-        
-      </div>
       <p class='soln_title'>{node.frontmatter.title}</p>
-      <p class='soln_desc'>{node.frontmatter.mini_description}<a class='learn_link' href={node.fields.slug}><p class='learn_more_link'>Learn more</p></a></p><br></br>
+      <p class='soln_desc'>{node.frontmatter.mini_description}</p><br></br>
+      <a href={'.' + node.fields.slug + 'index.html'}>LINK</a>
       {
         (node.frontmatter.features.length === 1 && node.frontmatter.features[0] === 'NONE') === true ? "" : 
           (node.frontmatter.features).map((data) =>
@@ -221,13 +220,6 @@ export const query = graphql`
           frontmatter {
             title
             mini_description
-            image{
-              childImageSharp {
-                fluid(maxWidth: 2428) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
             features
             github_link
             youtube_link
@@ -242,9 +234,3 @@ export const query = graphql`
     }
   }
 `
-
-/*
-fluid(maxWidth: 5000, quality: 90) {
-          ...GatsbyImageSharpFluid
-        }
-*/

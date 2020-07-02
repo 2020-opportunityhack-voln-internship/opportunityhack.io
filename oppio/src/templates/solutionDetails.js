@@ -6,6 +6,7 @@ import styled from "styled-components"
 import Footer from "../components/footer"
 import Logo from "../../banner_w.png"
 import "../components/layout.css"
+import { Link } from "gatsby"
 
 const ImgStyled = styled(Img)`
     width: auto;
@@ -32,11 +33,28 @@ export default ({ data }) => {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
             <title>OpportunityHack</title>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
+    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"></meta>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script>
+      {
+        `
+        function onSignIn(){
+          alert('SUCCESS');
+        }
+        `
+      }
+    </script>
+
           </Helmet>
 
           <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
-                    <a href='/'><img id='logo_img' src={Logo}></img></a>
+                    <div class='logo_wrapper'>
+                      <Link to="/">
+                      <img class='logo_image_nav' src='../banner_w.png'></img>
+                      </Link>
+                    </div>
                 </div>
 
                 <div id='nav_items' class='hidden animate__animated animate__slideInDown'>
@@ -49,11 +67,9 @@ export default ({ data }) => {
 
           <div class='details_wrapper'>
             <div class='detail_header info_banner'>
-              <br></br>
+              <br></br><br></br>
               <h1 class='banner_heading graytext'>{post.frontmatter.title}</h1>
               <div class='small_border gray'></div>
-              <br></br>
-              <ImgStyled fluid={post.frontmatter.image.childImageSharp.fluid}/>
               <p>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
               </p>
@@ -148,13 +164,6 @@ export const query = graphql`
       frontmatter {
         title
         mini_description
-        image{
-          childImageSharp {
-            fluid(maxWidth: 400) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         features
         github_link
         youtube_link

@@ -146,6 +146,10 @@ li {
   display: block;
   border: 3px solid ghostwhite;
 }
+.soln_img {
+  width: 100%;
+  height: auto;
+}
 .banner_img_over {
   position: relative;
   margin-left: auto;
