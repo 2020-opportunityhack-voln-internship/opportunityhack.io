@@ -31,13 +31,6 @@ return (
     </script>
   </Helmet>
 
-  <GoogleLogin
-    clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
-    buttonText="Sign in"
-    onSuccess='onSignIn'
-    cookiePolicy={'single_host_origin'}
-    className='g-signin2 my-signin2 gbtn'
-  />
                 <div class='topnav'>
                     <div class='logo_wrapper'>
                       <a href='/'>
