@@ -57,9 +57,9 @@ return (
   <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
                     <div class='logo_wrapper'>
-                      <Link to="./index.html">
+                      <a href='index.html'>
                       <img class='logo_image_nav' src='./banner_w.png'></img>
-                      </Link>
+                      </a>
                     </div>
                 </div>
 
