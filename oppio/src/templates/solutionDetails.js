@@ -1,32 +1,12 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import Img from "gatsby-image";
-import styled from "styled-components"
 import Footer from "../components/footer"
-import Logo from "../../banner_w.png"
 import "../components/layout.css"
-import { Link } from "gatsby"
-
-
-const ImgStyled = styled(Img)`
-    width: auto;
-    height: auto;
-    max-width: 400px;
-    max-height: 400px;
-    min-height: 1px;
-    min-width: 1px;
-    margin: auto;
-    padding: 0;
-`
 
 export default ({ data }) => {
     const post = data.markdownRemark;
     var numFeatures = post.frontmatter.features.length;
-    function scrollToTools(){
-      var topOfTools = document.querySelector('#banner_3').offsetTop - 50;
-      window.scroll({top: topOfTools});
-    }
     return (
        <div>
           <Helmet>
@@ -48,7 +28,7 @@ export default ({ data }) => {
           <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
                 <div class='topnav'>
                     <div class='logo_wrapper'>
-                      <a href='../index.html'>
+                      <a href='/'>
                       <img class='logo_image_nav' src='../banner_w.png'></img>
                       </a>
                     </div>
@@ -74,7 +54,7 @@ export default ({ data }) => {
                 <a id='banner_link' onClick={() => 
       window.scroll({top: document.querySelector('#banner_3').offsetTop - 50})}>View tutorial</a>
               </center>
-              <br></br>
+              <br></br><br></br>
           </div>
 
           <div id='banner_4' class='info_banner'>

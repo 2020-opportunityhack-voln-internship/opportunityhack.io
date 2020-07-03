@@ -305,7 +305,6 @@ li {
   padding-bottom: 20px;
   border-radius: 0px;
   box-shadow: 0px 0px 5px #d1d1d1;
-  padding: 20px;
 }
 .soln_desc {
   text-align: left;
@@ -332,13 +331,18 @@ li {
   padding: 20px 0;
 }
 .soln_title {
-  text-align: left;
-  width: auto;
+  text-align: center;
+  width: 100%;
   font-weight: lighter;
   font-size: 36px;
-  margin: 5px auto;
+  margin: 0px auto;
   line-height: 40px;
-  padding-bottom: 20px;
+  padding: 20px;
+  background-color: #24292e;
+  color: ghostwhite;
+}
+.soln_inner_wrap {
+  padding: 20px;
 }
 .feature {
   width: 320px;
@@ -426,6 +430,8 @@ li {
   color: #4499ee;
   text-decoration: underline;
   width: 100px;
+  font-family: sans-serif;
+  font-weight: lighter;
 }
 .learn_more_link:hover {
   color: #0c59a5;

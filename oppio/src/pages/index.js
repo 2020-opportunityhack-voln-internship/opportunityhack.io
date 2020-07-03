@@ -1,38 +1,12 @@
 import React from "react"
 import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
-import OppLogo from "../images/Logos/White/banner_w.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import styled from "styled-components"
 import Footer from "../components/footer"
 import "../components/layout.css"
-import Logo from "../../banner_w.png"
-import bannerimg from "../images/banner_img.jpg"
-import bannerimgover from "../images/square_w.png"
-import { Link } from "gatsby"
-
-
-
-const ImgStyled = styled(Img)`
-    width: auto;
-    height: auto;
-    max-width: 95%;
-    max-height: 400px;
-    min-height: 1px;
-    min-width: 1px;
-    margin: auto;
-    padding: 0;
-    background-color: ghostwhite;
-`
-
-
+import Img from "gatsby-image"
 
 export default ({ data }) => {
-  function scrollToTools(){
-    var topOfTools = document.querySelector('#tool_section').offsetTop - 50;
-    window.scroll({top: topOfTools});
-  }
 return (
   <body>
     
@@ -47,6 +21,9 @@ return (
         function onSignIn(){
           alert('SUCCESS');
         }
+        function onFailure(){
+          alert('FAILURE TO SIGN IN');
+        }
         `
       }
     </script>
@@ -54,10 +31,10 @@ return (
   </Helmet>
 
 
-  <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
+  <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-onfailure='onFailure' data-theme="light"></div>
                 <div class='topnav'>
                     <div class='logo_wrapper'>
-                      <a href='index.html'>
+                      <a href='/'>
                       <img class='logo_image_nav' src='./banner_w.png'></img>
                       </a>
                     </div>
@@ -77,8 +54,8 @@ return (
                 <div id='inner_banner'>
                     <div class='blur_banner'></div>
                     <img class='banner_img_over' src='./square_w.png'></img>
-                    <button id='banner_scroll_btn' onClick={() =>
-      window.scroll({top: document.querySelector('#tool_section').offsetTop - 50})}>See our tools</button>
+                    <p id='banner_scroll_btn' onClick={() =>
+      window.scroll({top: document.querySelector('#tool_section').offsetTop - 50})}>See our tools</p>
                 </div>
             </div>
 
@@ -144,9 +121,11 @@ return (
     <div class='solution'>
 
       <p class='soln_title'>{node.frontmatter.title}</p>
+
+      <div class='soln_inner_wrap'>
       <p class='soln_desc'>{node.frontmatter.mini_description}</p>
 
-      <a class='learn_more_link' href={'.' + node.fields.slug + 'index.html'}>Learn more</a>
+      <a class='learn_more_link' href={node.fields.slug}>Learn more</a>
       <br></br><br></br>
       {
         (node.frontmatter.features.length === 1 && node.frontmatter.features[0] === 'NONE') === true ? "" : 
@@ -174,7 +153,7 @@ return (
           <p>View Heroku</p>
       </div>
       </a>
-      
+      </div>
     </div>  
   ))}
 
