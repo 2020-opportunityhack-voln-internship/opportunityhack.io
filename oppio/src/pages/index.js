@@ -12,8 +12,7 @@ return (
     
     <Helmet>
     <title>OpportunityHack</title>
-    
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"/>
     <script>
       {
