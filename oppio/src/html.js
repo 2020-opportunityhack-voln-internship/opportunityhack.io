@@ -17,8 +17,6 @@ export default function HTML(props) {
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
             
     
-  <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"/>
 
       </head>
       <body {...props.bodyAttributes}>
@@ -29,6 +27,7 @@ export default function HTML(props) {
           dangerouslySetInnerHTML={{ __html: props.body }}
         />
         {props.postBodyComponents}
+
       </body>
     </html>
   )

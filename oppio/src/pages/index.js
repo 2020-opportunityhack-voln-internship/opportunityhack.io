@@ -5,6 +5,7 @@ import { graphql } from "gatsby"
 import Footer from "../components/footer"
 import "../components/layout.css"
 import Img from "gatsby-image"
+import { GoogleLogin } from 'react-google-login';
 
 export default ({ data }) => {
 return (
@@ -12,9 +13,11 @@ return (
     
     <Helmet>
     <title>OpportunityHack</title>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
     <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"/>
-    <script>
+    
+  <script>
       {
         `
         function onSignIn(){
@@ -26,11 +29,15 @@ return (
         `
       }
     </script>
-    
   </Helmet>
 
-
-  <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-onfailure='onFailure' data-theme="light"></div>
+  <GoogleLogin
+    clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
+    buttonText="Login"
+    onSuccess='onSignIn'
+    cookiePolicy={'single_host_origin'}
+    className='g-signin2 my-signin2 gbtn'
+  />
                 <div class='topnav'>
                     <div class='logo_wrapper'>
                       <a href='/'>
