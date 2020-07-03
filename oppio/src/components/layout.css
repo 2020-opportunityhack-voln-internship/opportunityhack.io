@@ -201,14 +201,6 @@ li {
   width: 80%;
   word-wrap: normal;
 }
-@media(max-width: 500px){
-  .banner_heading {
-    font-size: 40px;
-  }
-  .solution {
-    width: 350px;
-  }
-}
 .detail_header {
   color: #29242e;
 }
@@ -279,7 +271,7 @@ li {
   text-align: center;
   color: ghostwhite;
   padding: 30px 10px 10px 10px;
-  font-size: 54px;
+  font-size: 45px;
   word-wrap: normal;
 }
 #tool_heading {
@@ -374,7 +366,7 @@ li {
   text-align: center;
   width: 100%;
   font-weight: lighter;
-  font-size: 36px;
+  font-size: 30px;
   margin: 0px auto;
   line-height: 40px;
   padding: 20px;
