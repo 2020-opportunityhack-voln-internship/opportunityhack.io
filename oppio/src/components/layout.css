@@ -202,9 +202,10 @@ li {
 }
 .gbtn {
   position: fixed;
-  top: 8px;
+  top: 6px;
   right: 10px;
   z-index: 200;
+  height: 40px;
 }
 .detail_header p {
   color: #29242e;
