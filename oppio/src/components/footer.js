@@ -2,6 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
+import "../components/layout.css"
 import { GoogleLogin } from 'react-google-login';
 
 const Footer = () => (
@@ -40,7 +41,7 @@ const Footer = () => (
     buttonText="Sign in"
     onSuccess='onSignIn'
     cookiePolicy={'single_host_origin'}
-    className='g-signin2 my-signin2 gbtn'
+    className='g-signin2 my-signin2'
   />
         <h1 class='footer_heading'>Stay Connected</h1>
         <div class='small_border white'></div>

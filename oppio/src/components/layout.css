@@ -200,12 +200,11 @@ li {
 .detail_header {
   color: #29242e;
 }
-.gbtn {
+.my-signin2 {
   position: fixed;
-  top: 6px;
+  top: 5px;
   right: 10px;
   z-index: 200;
-  height: 40px;
 }
 .detail_header p {
   color: #29242e;
