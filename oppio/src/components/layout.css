@@ -499,14 +499,15 @@ li {
   max-width: 100px;
 }
 .github_link_element p {
-  width: auto;
-  position: relative;
-  float: right;
+  width: calc(100% - 100px);
+  position: absolute;
   color: ghostwhite;
+  right: 0;
+  top: 10px;
   height: 50px;
   line-height: 50px;
   font-weight: lighter;
-  right: 100px;
+  text-align: left;
 }
 .detail_link_ext {
   border: 1px solid ghostwhite;
@@ -542,14 +543,15 @@ li {
   max-width: 100px;
 }
 .heroku_link_element p {
-  width: auto;
-  position: relative;
-  float: right;
+  width: calc(100% - 100px);
+  position: absolute;
   color: ghostwhite;
+  right: 0;
+  top: 10px;
   height: 50px;
   line-height: 50px;
   font-weight: lighter;
-  right: 100px;
+  text-align: left;
 }
 .details_wrapper {
   position: relative;
