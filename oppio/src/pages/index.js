@@ -26,13 +26,13 @@ const ImgStyled = styled(Img)`
     background-color: ghostwhite;
 `
 
-function scrollToTools(){
-  var topOfTools = document.querySelector('#tool_section').offsetTop - 50;
-  window.scroll({top: topOfTools});
-}
+
 
 export default ({ data }) => {
-  
+  function scrollToTools(){
+    var topOfTools = document.querySelector('#tool_section').offsetTop - 50;
+    window.scroll({top: topOfTools});
+  }
 return (
   <body>
     
@@ -77,7 +77,8 @@ return (
                 <div id='inner_banner'>
                     <div class='blur_banner'></div>
                     <img class='banner_img_over' src='./square_w.png'></img>
-                    <p id='banner_scroll_btn' onClick={scrollToTools}>See our tools</p>
+                    <button id='banner_scroll_btn' onClick={() =>
+      window.scroll({top: document.querySelector('#tool_section').offsetTop - 50})}>See our tools</button>
                 </div>
             </div>
 
@@ -89,6 +90,7 @@ return (
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
 
     <img class='logoimg' src='./banner_w.png'></img>
+
     </p>
   </div>
 
