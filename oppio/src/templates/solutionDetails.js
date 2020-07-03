@@ -19,13 +19,16 @@ export default ({ data }) => {
         function onSignIn(){
           alert('SUCCESS');
         }
+        function onFailure(){
+          alert('FAILURE TO SIGN IN');
+        }
         `
       }
     </script>
 
           </Helmet>
 
-          <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-theme="light"></div>
+          <div class="g-signin2 my-signin2 gbtn" data-onsuccess='onSignIn' data-onfailure='onFailure' data-theme="light"></div>
                 <div class='topnav'>
                     <div class='logo_wrapper'>
                       <a href='/'>
