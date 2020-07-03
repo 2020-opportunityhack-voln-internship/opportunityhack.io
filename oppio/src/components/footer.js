@@ -4,7 +4,12 @@ import { Helmet } from "react-helmet"
 
 import "../components/layout.css"
 import { GoogleLogin } from 'react-google-login';
-
+function onSignIn(){
+  alert('SUCCESS');
+}
+function onFailure(){
+  alert('FAILURE TO SIGN IN');
+}
 const Footer = () => (
   <StaticQuery
     query={graphql`
@@ -35,14 +40,17 @@ const Footer = () => (
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
           </Helmet>
 
-          
-  <GoogleLogin
+          <GoogleLogin
     clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
-    buttonText="Sign in"
-    onSuccess='onSignIn'
+    render={renderProps => (
+      <button class='gbtn' onClick={renderProps.onClick}>Sign in</button>
+    )}
+    buttonText="Login"
+    onSuccess={onSignIn}
+    onFailure={onFailure}
     cookiePolicy={'single_host_origin'}
-    className='g-signin2 my-signin2'
-  />
+  />   
+
         <h1 class='footer_heading'>Stay Connected</h1>
         <div class='small_border white'></div>
         <center>
