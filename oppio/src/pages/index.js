@@ -34,7 +34,7 @@ return (
                 <div class='topnav'>
                     <div class='logo_wrapper'>
                       <a href='/'>
-                      <img class='logo_image_nav' src='./banner_w.png'></img>
+                      <img class='logo_image_nav' src='./cropped_w.png'></img>
                       </a>
                     </div>
                 </div>

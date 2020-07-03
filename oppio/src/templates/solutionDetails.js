@@ -30,7 +30,7 @@ export default ({ data }) => {
                 <div class='topnav'>
                     <div class='logo_wrapper'>
                       <a href='/'>
-                      <img class='logo_image_nav' src='../banner_w.png'></img>
+                      <img class='logo_image_nav' src='../cropped_w.png'></img>
                       </a>
                     </div>
                 </div>
@@ -48,7 +48,7 @@ export default ({ data }) => {
               <br></br><br></br>
               <h1 class='banner_heading graytext'>{post.frontmatter.title}</h1>
               <div class='small_border gray'></div>
-              <p>
+              <p class='detail_html'>
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
               </p>
               <center>

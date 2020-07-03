@@ -43,9 +43,11 @@ const Footer = () => (
           <GoogleLogin
     clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
     render={renderProps => (
-      <button class='gbtn' onClick={renderProps.onClick}>Sign in</button>
+      <button class='google_btn' onClick={renderProps.onClick}>
+        <img src='https://developers.google.com/identity/images/g-logo.png' alt=''></img>
+        <p class='gbtn' >Sign in</p>
+      </button>
     )}
-    buttonText="Login"
     onSuccess={onSignIn}
     onFailure={onFailure}
     cookiePolicy={'single_host_origin'}
