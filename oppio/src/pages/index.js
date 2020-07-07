@@ -17,18 +17,6 @@ return (
       <script src="https://apis.google.com/js/platform.js" async defer></script>
       <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"/>
     
-      <script>
-      {
-        `
-        function onSignIn(){
-          alert('SUCCESS');
-        }
-        function onFailure(){
-          alert('FAILURE TO SIGN IN');
-        }
-        `
-      }
-      </script>
     </Helmet>
     {/* END OF HELMET */}
 
@@ -170,7 +158,7 @@ return (
 
   {/* BANNER 5. Donation banner. */}
   <div id='banner_5' class='info_banner'>
-    <h1 class='banner_heading'>Donations are your Opportunity to contribute!</h1>
+    <h1 class='banner_heading'>Donations are your opportunity to contribute!</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
     <br></br>
