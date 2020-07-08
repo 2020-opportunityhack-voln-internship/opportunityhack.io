@@ -4,11 +4,16 @@ import { Helmet } from "react-helmet"
 
 import "../components/layout.css"
 import { GoogleLogin } from 'react-google-login';
-function onSignIn(){
-  alert('SUCCESS');
+function onSignIn(googleUser){
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+  document.getElementById('gbtn_title').innerHTML = profile.getName();
 }
 function onFailure(){
-  alert('FAILURE TO SIGN IN');
+  alert('Login failed. Try again.');
 }
 const Footer = () => (
   <StaticQuery
@@ -49,7 +54,7 @@ const Footer = () => (
             render={renderProps => (
               <button class='google_btn' onClick={renderProps.onClick}>
                 <img src='https://developers.google.com/identity/images/g-logo.png' alt=''></img>
-                <p class='gbtn' >Sign in</p>
+                <p class='gbtn' id='gbtn_title'>Sign in</p>
               </button>
             )}
             onSuccess={onSignIn}
