@@ -6,6 +6,7 @@ import Footer from "../components/footer"
 import "../components/layout.css"
 import Img from "gatsby-image"
 import { GoogleLogin } from 'react-google-login';
+import TopNav from "../components/topnav"
 
 export default ({ data }) => {
 return (
@@ -21,13 +22,7 @@ return (
     {/* END OF HELMET */}
 
     {/* NAV */}
-    <div class='topnav'>
-      <div class='logo_wrapper'>
-        <a href='/'>
-        <img class='logo_image_nav' src='./cropped_w.png'></img>
-        </a>
-      </div>
-    </div>
+    <TopNav />
     {/* END OF NAV */}
   
   {/* TOP BANNER OF HOMEPAGE */}

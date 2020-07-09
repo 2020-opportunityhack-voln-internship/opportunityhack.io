@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Footer from "../components/footer"
 import "../components/layout.css"
+import TopNav from "../components/topnav"
 
 export default ({ data }) => {
     /* Collect the number of features to determine logic later on page. */
@@ -18,13 +19,7 @@ export default ({ data }) => {
           {/* END OF HELMET */}
 
           {/* TOP NAV  */}
-          <div class='topnav'>
-            <div class='logo_wrapper'>
-              <a href='/'>
-                <img class='logo_image_nav' src='../cropped_w.png'></img>
-              </a>
-            </div>
-          </div>
+          <TopNav />
           {/* END TOP NAV */}
           
           {/* SOFTWARE SOLUTION TOP SECTION. This is where the long description and title go. */}

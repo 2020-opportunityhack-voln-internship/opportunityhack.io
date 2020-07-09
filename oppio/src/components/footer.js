@@ -3,18 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 
 import "../components/layout.css"
-import { GoogleLogin } from 'react-google-login';
-function onSignIn(googleUser){
-  var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-  document.getElementById('gbtn_title').innerHTML = profile.getName();
-}
-function onFailure(){
-  alert('Login failed. Try again.');
-}
+
 const Footer = () => (
   <StaticQuery
     query={graphql`
@@ -47,21 +36,6 @@ const Footer = () => (
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
         </Helmet>
         {/* END OF HELMET */}
-
-          {/* Google login button */}
-          <GoogleLogin
-            clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
-            render={renderProps => (
-              <button class='google_btn' onClick={renderProps.onClick}>
-                <img src='https://developers.google.com/identity/images/g-logo.png' alt=''></img>
-                <p class='gbtn' id='gbtn_title'>Sign in</p>
-              </button>
-            )}
-            onSuccess={onSignIn}
-            onFailure={onFailure}
-            cookiePolicy={'single_host_origin'}
-          />   
-          {/* End of google login button */}
 
           {/* Social media links and bottom footer element */}
           <h1 class='footer_heading'>Stay Connected</h1>
