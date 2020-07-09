@@ -226,7 +226,7 @@ li {
     float: right;
     height: 40px;
     margin-top: 5px;
-    width: 100px;
+    width: auto;
     text-align: center;
     background-color: #00ad9F;
     line-height: 40px;
@@ -234,6 +234,7 @@ li {
     border: 2px solid #007a70;
     font-size: 16px;
     font-weight: bolder;
+    padding: 0 10px;
 }
 .topnav ul li a {
   color: white;
