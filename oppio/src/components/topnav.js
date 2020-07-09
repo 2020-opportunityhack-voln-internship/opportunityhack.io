@@ -19,9 +19,10 @@ function onSignIn(googleUser){
   function onFailure(){
     alert('Login failed. Try again.');
   }
-  function signOut(){
-      alert('signing out function. needs work.');
+  function logoutSuccess(){
+      alert('Logged out');
   }
+  
 class TopNav extends React.Component {
       render(){
           return (
@@ -42,17 +43,6 @@ class TopNav extends React.Component {
                     </div>
 
                     <ul>
-                        <li id='logout_item'>
-                            <GoogleLogout 
-                            clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
-                            render={renderProps => (
-                                <button class='google_btn logout_btn' onClick={signOut}>
-                                <p class='gbtn' id='gbtn_title_logout'>Logout</p>
-                                </button>
-                                )}
-                                ></GoogleLogout>
-                        </li>
-
                         <li>
                         <GoogleLogin
                                 clientId="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"
@@ -65,6 +55,7 @@ class TopNav extends React.Component {
                                 onSuccess={onSignIn}
                                 onFailure={onFailure}
                                 cookiePolicy={'single_host_origin'}
+                                isSignedIn={true}
                             />
                         </li>
                     </ul>
