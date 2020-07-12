@@ -1,5 +1,6 @@
 import React from "react"
 import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
+import DonateImg from "../images/button-PayPal-donate.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Footer from "../components/footer"
@@ -156,7 +157,10 @@ return (
     <h1 class='banner_heading'>Donations are your opportunity to contribute!</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
-    <br></br>
+    <br></br><br></br>
+    <a href="">
+    <img id='donation_icon' src={DonateImg}></img>
+    </a>
     </p>
   </div>
   {/* END OF BANNER 5 */}
