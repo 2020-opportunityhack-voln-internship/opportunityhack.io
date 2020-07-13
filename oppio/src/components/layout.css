@@ -887,22 +887,24 @@ li {
   position: absolute;
   word-wrap: normal;
 }
-.service button {
+.service a {
   position: relative;
   right: 0;
   top: 0;
   float: right;
   height: 100%;
   width: auto;
-  padding: 10px 30px;
+  padding: 0px 30px;
   color: ghostwhite;
   background-color: #007a70;
   outline: none;
   border: none;
   cursor: pointer;
   font-family: sans-serif;
+  line-height: 100px;
+  text-decoration: none;
 }
-.service button:hover {
+.service a:hover {
   color: #00ad9F;
 }
 body {

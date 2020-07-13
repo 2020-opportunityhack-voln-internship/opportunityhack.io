@@ -45,14 +45,6 @@ return (
         
             {
                 user_full_name === "" ? 
-                
-                <div id='logged_out_wrap'>
-                    <h1 class='dash_welcome'>Welcome.</h1>
-                    <p class='dash_login_message'>Looks like you aren't logged in. Please sign in to use the dashboard.</p>
-                    <div data-netlify-identity-button id='dash_login_btn'></div>
-                </div>
-
-                : 
 
                 <div id='logged_in_wrap'>
                     <center>
@@ -71,9 +63,19 @@ return (
                       :
                       <div class='service'>
                         <p class='service_title'>{node.frontmatter.title}</p>
-                        <button>Deploy</button>
+                        <a href={node.frontmatter.heroku_link}>Deploy</a>
                       </div>
                     ))}
+                </div>
+                
+                
+
+                : 
+
+                <div id='logged_out_wrap'>
+                    <h1 class='dash_welcome'>Welcome.</h1>
+                    <p class='dash_login_message'>Looks like you aren't logged in. Please sign in to use the dashboard.</p>
+                    <div data-netlify-identity-button id='dash_login_btn'></div>
                 </div>
 
             }
