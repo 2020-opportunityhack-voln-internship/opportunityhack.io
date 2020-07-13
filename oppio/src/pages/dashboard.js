@@ -7,6 +7,7 @@ import "../components/layout.css"
 import Img from "gatsby-image"
 import { GoogleLogin } from 'react-google-login';
 import TopNav from "../components/topnav"
+import DefaultImg from "../images/blue.png"
 
 export default ({ data }) => {
 
@@ -14,10 +15,12 @@ const netlifyIdentity = require('netlify-identity-widget');
 
 var user_full_name = ""
 var user_img_url = ""
+var user_created = ""
 
 if(netlifyIdentity.currentUser() !== null){
     user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
     user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
+    user_created = netlifyIdentity.currentUser().created_at;
 }
 
 
@@ -50,10 +53,27 @@ return (
                 </div>
 
                 : 
-                
-                <div>
-                    <img src={user_img_url}></img>
-                    <p class='valid_username'>{user_full_name}</p>
+
+                <div id='logged_in_wrap'>
+                    <center>
+                      <h1 class='dash_title'>Welcome to the Dashboard</h1>
+                      <div class='small_border gray'></div>
+                    <div  class='dash_head_info'>
+                      <img class='user_img' src={user_img_url || DefaultImg}></img>
+                      <p class='valid_username'>{user_full_name || "Guest"}</p>
+                      <p class='create_date'>Created {user_created || "sometime"}</p>
+                    </div>
+                    </center>
+                    <h1 class='category_title'>Deploy Services</h1>
+                    {data.allMarkdownRemark.edges.map(({ node }) => (
+                      node.frontmatter.heroku_link === "" ?
+                      ""
+                      :
+                      <div class='service'>
+                        <p class='service_title'>{node.frontmatter.title}</p>
+                        <button>Deploy</button>
+                      </div>
+                    ))}
                 </div>
 
             }

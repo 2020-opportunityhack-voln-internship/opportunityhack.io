@@ -782,7 +782,7 @@ li {
 }
 #logged_out_wrap {
   position: relative;
-  margin-top: 75px;
+  margin-top: 25px;
 }
 .dash_welcome {
   font-weight: lighter;
@@ -799,11 +799,12 @@ li {
   text-align: center;
 }
 .valid_username {
-  width: 100%;
-  padding: 20px 50px 0 50px;
-  color: dimgray;
+  width: auto;
+  padding: 0px 50px 0 50px;
+  color: #24292e;
   text-align: center;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: lighter;
 }
 #dash_login_btn {
   position: relative;
@@ -821,6 +822,88 @@ li {
   color: ghostwhite;
   text-decoration: none;
   padding: 20px 60px;
+}
+.user_img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 0 4px gray;
+}
+#logged_in_wrap {
+  position: relative;
+  margin-top: 25px;
+  margin: 25px auto 0 auto;
+}
+.dash_title {
+  font-weight: lighter;
+  font-size: 50px;
+  color: #24292e;
+  width: auto;
+}
+.dash_head_info {
+  max-width: 400px;
+  min-width: 300px;
+  height: auto;
+  padding: 30px 10px 10px 10px;
+  border-radius: 20px;
+}
+.create_date {
+  color: dimgray;
+  font-size: 16px;
+  font-weight: lighter;
+  margin-top: -20px;
+}
+.category_title {
+  font-weight: lighter;
+  font-size: 40px;
+  color: #24292e;
+  border-bottom: 1px solid gray;
+  width: auto;
+  padding-bottom: 20px;
+  margin: 20px 30px;
+}
+.service {
+  margin: 10px 30px;
+  width: auto;
+  height: 100px;
+  padding: 0;
+  background-color: #00ad9F;
+  border: 2px solid #007a70;
+  position: relative;
+}
+.service_title {
+  height: 100px;
+  width: auto;
+  max-width: 250px;
+  line-height: 100px;
+  padding: 0 20px;
+  font-size: 20px;
+  font-weight: lighter;
+  color: ghostwhite;
+  float: left;
+  left: 0;
+  top: 0;
+  position: absolute;
+  word-wrap: normal;
+}
+.service button {
+  position: relative;
+  right: 0;
+  top: 0;
+  float: right;
+  height: 100%;
+  width: auto;
+  padding: 10px 30px;
+  color: ghostwhite;
+  background-color: #007a70;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+.service button:hover {
+  color: #00ad9F;
 }
 body {
   margin: 0;
