@@ -5,7 +5,6 @@ import { graphql } from "gatsby"
 import Footer from "../components/footer"
 import "../components/layout.css"
 import Img from "gatsby-image"
-import { GoogleLogin } from 'react-google-login';
 import TopNav from "../components/topnav"
 import DefaultImg from "../images/blue.png"
 
@@ -13,17 +12,15 @@ export default ({ data }) => {
 
 const netlifyIdentity = require('netlify-identity-widget');
 
-var user_full_name = ""
-var user_img_url = ""
-var user_created = ""
+var user_full_name = "";
+var user_img_url = "";
+var user_created = "";
 
 if(netlifyIdentity.currentUser() !== null){
     user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
     user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
-    user_created = netlifyIdentity.currentUser().created_at;
-    
+    user_created = netlifyIdentity.currentUser().created_at; 
 }
-
 
 return (
   <body>
@@ -47,6 +44,14 @@ return (
             {
                 user_full_name === "" ? 
 
+                <div id='logged_out_wrap'>
+                    <h1 class='dash_welcome'>Welcome.</h1>
+                    <p class='dash_login_message'>Looks like you aren't logged in. Please sign in to use the dashboard.</p>
+                    <div data-netlify-identity-button id='dash_login_btn'></div>
+                </div>
+                
+                : 
+
                 <div id='logged_in_wrap'>
                     <center>
                       <div id='dash_banner'>
@@ -65,43 +70,32 @@ return (
                       ""
                       :
                       <div class='service_wrap'>
-                      <a href={node.fields.slug}>
-                      <div class='service'>
-                        <p class='service_title'>{node.frontmatter.title + ""}</p>
-                        <a class='deploy_link' href={node.frontmatter.heroku_link}>Deploy</a>
-                        {node.frontmatter.youtube_link !== "" ?
+                        <a href={node.fields.slug}>
+                          <div class='service'>
+                            <p class='service_title'>{node.frontmatter.title}</p>
+                            <a class='deploy_link' href={node.frontmatter.heroku_link}>Deploy</a>
+                            {node.frontmatter.youtube_link !== "" ?
 
-                        <a href={node.frontmatter.youtube_link} class='tutorial_link' target='_blank'>TUTORIAL</a>
-                        :
-                        ""
-                        }
-                      </div>
-                      </a>
+                            <a href={node.frontmatter.youtube_link} class='tutorial_link' target='_blank'>TUTORIAL</a>
+                            :
+                            ""
+                            }
+                        </div>
+                        </a>
                       <p class='service_desc'>{node.frontmatter.mini_description}</p>
                       {
                         node.frontmatter.github_link === "" ?
                         "" :
                         <a href={node.frontmatter.github_link}>
-                        <div class='github_mini_link'>
-                          <img class='github_mini' src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
-                          <p class='ghub_p'>View Github</p>
-                        </div>
+                          <div class='github_mini_link'>
+                            <img class='github_mini' src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
+                            <p class='ghub_p'>View Github</p>
+                          </div>
                         </a>
                       }
                       </div>
                     ))}
                 </div>
-                
-                
-
-                : 
-
-                <div id='logged_out_wrap'>
-                    <h1 class='dash_welcome'>Welcome.</h1>
-                    <p class='dash_login_message'>Looks like you aren't logged in. Please sign in to use the dashboard.</p>
-                    <div data-netlify-identity-button id='dash_login_btn'></div>
-                </div>
-
             }
     </div>
 

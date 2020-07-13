@@ -782,7 +782,7 @@ li {
 }
 #logged_out_wrap {
   position: relative;
-  margin-top: 25px;
+  margin-top: 90px;
 }
 #dash_banner {
   width: 100%;
@@ -820,7 +820,7 @@ li {
   width: 200px;
   background-color: #00ad9F;
   text-align: center;
-  padding: 20px 10px;
+  padding: 20px 0;
   font-family: sans-serif;
   border: 2px solid #007a70;
   border-radius: 4px;
