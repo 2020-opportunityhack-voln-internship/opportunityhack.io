@@ -21,6 +21,7 @@ if(netlifyIdentity.currentUser() !== null){
     user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
     user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
     user_created = netlifyIdentity.currentUser().created_at;
+    
 }
 
 
@@ -48,12 +49,14 @@ return (
 
                 <div id='logged_in_wrap'>
                     <center>
+                      <div id='dash_banner'>
                       <h1 class='dash_title'>Welcome to the Dashboard</h1>
-                      <div class='small_border gray'></div>
+                      <div class='small_border white'></div>
                     <div  class='dash_head_info'>
                       <img class='user_img' src={user_img_url || DefaultImg}></img>
                       <p class='valid_username'>{user_full_name || "Guest"}</p>
                       <p class='create_date'>Created {user_created || "sometime"}</p>
+                    </div>
                     </div>
                     </center>
                     <h1 class='category_title'>Deploy Services</h1>
@@ -61,9 +64,30 @@ return (
                       node.frontmatter.heroku_link === "" ?
                       ""
                       :
+                      <div class='service_wrap'>
+                      <a href={node.fields.slug}>
                       <div class='service'>
-                        <p class='service_title'>{node.frontmatter.title}</p>
-                        <a href={node.frontmatter.heroku_link}>Deploy</a>
+                        <p class='service_title'>{node.frontmatter.title + ""}</p>
+                        <a class='deploy_link' href={node.frontmatter.heroku_link}>Deploy</a>
+                        {node.frontmatter.youtube_link !== "" ?
+
+                        <a href={node.frontmatter.youtube_link} class='tutorial_link' target='_blank'>TUTORIAL</a>
+                        :
+                        ""
+                        }
+                      </div>
+                      </a>
+                      <p class='service_desc'>{node.frontmatter.mini_description}</p>
+                      {
+                        node.frontmatter.github_link === "" ?
+                        "" :
+                        <a href={node.frontmatter.github_link}>
+                        <div class='github_mini_link'>
+                          <img class='github_mini' src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
+                          <p class='ghub_p'>View Github</p>
+                        </div>
+                        </a>
+                      }
                       </div>
                     ))}
                 </div>

@@ -777,12 +777,19 @@ li {
   position: relative;
   margin-top: 50px;
   background-color: ghostwhite;
-  padding: 20px;
+  padding: 0px;
   margin-bottom: 0;
 }
 #logged_out_wrap {
   position: relative;
   margin-top: 25px;
+}
+#dash_banner {
+  width: 100%;
+  height: auto;
+  background-color: #2c2d2e;
+  padding-top: 30px;
+  margin-bottom: 50px;
 }
 .dash_welcome {
   font-weight: lighter;
@@ -801,7 +808,7 @@ li {
 .valid_username {
   width: auto;
   padding: 0px 50px 0 50px;
-  color: #24292e;
+  color: white;
   text-align: center;
   font-size: 30px;
   font-weight: lighter;
@@ -828,17 +835,18 @@ li {
   height: 100px;
   border-radius: 50%;
   padding: 5px;
-  box-shadow: 0 0 4px gray;
+  background-color: white;
 }
 #logged_in_wrap {
   position: relative;
-  margin-top: 25px;
-  margin: 25px auto 0 auto;
+  margin-top: 0px;
+  margin: 0;
+  padding: 0;
 }
 .dash_title {
   font-weight: lighter;
   font-size: 50px;
-  color: #24292e;
+  color: white;
   width: auto;
 }
 .dash_head_info {
@@ -849,7 +857,7 @@ li {
   border-radius: 20px;
 }
 .create_date {
-  color: dimgray;
+  color: gainsboro;
   font-size: 16px;
   font-weight: lighter;
   margin-top: -20px;
@@ -872,29 +880,33 @@ li {
   border: 2px solid #007a70;
   position: relative;
 }
+.service:hover{
+  box-shadow: 0 0 4px dimgray;
+}
 .service_title {
-  height: 100px;
+  height: auto;
   width: auto;
-  max-width: 250px;
-  line-height: 100px;
+  max-width: 200px;
+  line-height: 25px;
   padding: 0 20px;
   font-size: 20px;
   font-weight: lighter;
   color: ghostwhite;
   float: left;
   left: 0;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   position: absolute;
   word-wrap: normal;
 }
-.service a {
+.deploy_link {
   position: relative;
   right: 0;
   top: 0;
   float: right;
   height: 100%;
   width: auto;
-  padding: 0px 30px;
+  padding: 0px 20px;
   color: ghostwhite;
   background-color: #007a70;
   outline: none;
@@ -904,8 +916,65 @@ li {
   line-height: 100px;
   text-decoration: none;
 }
+.tutorial_link {
+  position: relative;
+  float: right;
+  height: auto;
+  width: auto;
+  padding: 5px 10px;
+  color: ghostwhite;
+  background-color: #007a70;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: sans-serif;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 10px;
+  font-weight: bold;
+}
 .service a:hover {
   color: #00ad9F;
+}
+.service_desc {
+  width: auto;
+  height: auto;
+  max-width: 80%;
+  margin: 0 35px;
+  font-weight: lighter;
+}
+.bold {
+  font-weight: bolder;
+}
+.service_wrap {
+  margin-bottom: 60px;
+  padding: 0;
+}
+.github_mini{
+  width: 40px;
+  height: auto;
+  float: left;
+  border-radius: 50%;
+}
+.github_mini_link {
+  width: 150px;
+  height: 40px;
+  margin-left: 35px;
+  margin-top: 20px;
+  box-shadow: 0 0 2px dimgray;
+  background-color: white;
+}
+.ghub_p {
+  float: right;
+  color: dimgray;
+  font-family: sans-serif;
+  text-align: left;
+  line-height: 40px;
+  margin-right: 5px;
+  font-weight: lighter;
 }
 body {
   margin: 0;
