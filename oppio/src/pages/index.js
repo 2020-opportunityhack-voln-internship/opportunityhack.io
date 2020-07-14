@@ -1,6 +1,5 @@
 import React from "react"
 import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
-import DonateImg from "../images/button-PayPal-donate.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Footer from "../components/footer"
