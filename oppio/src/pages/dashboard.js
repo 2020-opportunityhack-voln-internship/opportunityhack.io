@@ -11,19 +11,20 @@ import TopNavLogo from "../images/Logos/White/cropped_w.png"
 
 export default ({ data }) => {
 
-const netlifyIdentity = require('netlify-identity-widget');
 
 var user_full_name = "";
 var user_img_url = "";
 var user_created = "";
 
-var log_elem;
-
-if(netlifyIdentity.currentUser() !== null){
-    user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
-    user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
-    user_created = netlifyIdentity.currentUser().created_at; 
+  if (typeof window !== `undefined`) {
+const netlifyIdentity = require('netlify-identity-widget');if(netlifyIdentity.currentUser() !== null){
+  user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
+  user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
+  user_created = netlifyIdentity.currentUser().created_at; 
 }
+  }
+
+
 
 return (
   <body>

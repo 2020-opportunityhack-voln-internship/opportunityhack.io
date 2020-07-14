@@ -7,18 +7,9 @@ import "../components/layout.css"
 import Img from "gatsby-image"
 import { GoogleLogin } from 'react-google-login';
 import TopNav from "../components/topnav"
+import netlifyIdentity from 'netlify-identity-widget'
 
 export default ({ data }) => {
-
-  const netlifyIdentity = require('netlify-identity-widget');
-
-  var user_full_name = ""
-  var user_img_url = ""
-
-  if(netlifyIdentity.currentUser() !== null){
-    user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
-    user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
-  }
 
 return (
   <body>
