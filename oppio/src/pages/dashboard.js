@@ -7,6 +7,7 @@ import "../components/layout.css"
 import Img from "gatsby-image"
 import TopNav from "../components/topnav"
 import DefaultImg from "../images/blue.png"
+import TopNavLogo from "../images/Logos/White/cropped_w.png"
 
 export default ({ data }) => {
 
@@ -15,6 +16,8 @@ const netlifyIdentity = require('netlify-identity-widget');
 var user_full_name = "";
 var user_img_url = "";
 var user_created = "";
+
+var log_elem;
 
 if(netlifyIdentity.currentUser() !== null){
     user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
@@ -36,7 +39,24 @@ return (
     {/* END OF HELMET */}
 
     {/* NAV */}
-    <TopNav />
+    <div class='topnav' async>
+                    <div class='logo_wrapper'>
+                        <a href='/'>
+                            <img class='logo_image_nav' src={TopNavLogo}></img>
+                        </a>
+                    </div>
+
+                    <ul>
+                        <li id='top_login'>
+                            <div data-netlify-identity-button></div>
+                        </li>
+                        <li>
+                            <a href='/dashboard'>Dashboard</a>
+                        </li>
+                    </ul>
+
+                </div>
+
     {/* END OF NAV */}
 
     <div class='content_wrap'>

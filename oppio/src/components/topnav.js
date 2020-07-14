@@ -27,7 +27,7 @@ class TopNav extends React.Component {
 
                     <ul>
                         <li>
-                            <div data-netlify-identity-button></div>
+                            <div data-netlify-identity-button id='top_login'></div>
                         </li>
                         <li>
                             <a href='/dashboard'>Dashboard</a>
