@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useCallback } from "react"
 import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
@@ -15,13 +15,17 @@ export default ({ data }) => {
 var user_full_name = "";
 var user_img_url = "";
 var user_created = "";
+var user;
 
   if (typeof window !== `undefined`) {
-const netlifyIdentity = require('netlify-identity-widget');if(netlifyIdentity.currentUser() !== null){
-  user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
-  user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
-  user_created = netlifyIdentity.currentUser().created_at; 
-}
+    const netlifyIdentity = require('netlify-identity-widget');
+    netlifyIdentity.init({});
+    user = netlifyIdentity.currentUser();
+    if(netlifyIdentity.currentUser() !== null){
+      user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
+      user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
+      user_created = netlifyIdentity.currentUser().created_at;
+    }
   }
 
 
@@ -40,7 +44,7 @@ return (
     {/* END OF HELMET */}
 
     {/* NAV */}
-    <div class='topnav' async>
+    <div class='topnav'>
                     <div class='logo_wrapper'>
                         <a href='/'>
                             <img class='logo_image_nav' src={TopNavLogo}></img>
@@ -69,6 +73,10 @@ return (
                     <h1 class='dash_welcome'>Welcome.</h1>
                     <p class='dash_login_message'>Looks like you aren't logged in. Please sign in to use the dashboard.</p>
                     <div data-netlify-identity-button id='dash_login_btn'></div>
+                    <center>
+                      <br></br>
+                      <p>If you already signed in, <a href='/dashboard'>reload the page</a></p>
+                    </center>
                 </div>
                 
                 : 
