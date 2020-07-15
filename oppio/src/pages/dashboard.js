@@ -23,25 +23,29 @@ var netlifyIdentity = null;
   if (typeof window !== `undefined`) {
     netlifyIdentity = require('netlify-identity-widget');
     netlifyIdentity.init({});
-    user = netlifyIdentity.currentUser();
 
     if(netlifyIdentity.currentUser() !== null){
       user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
       user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
       user_created = netlifyIdentity.currentUser().created_at;
     }
+    
   }
 
   function handleLogin(){
-    if(netlifyIdentity.currentUser() === null){
-      netlifyIdentity.on('close', () => {window.location.reload(false)});
-      netlifyIdentity.open();
-    }
-    else {
-      netlifyIdentity.logout();
-      window.location.reload(false);
+    netlifyIdentity = require('netlify-identity-widget');
+    if(netlifyIdentity){
+      if(user_full_name === ""){
+        netlifyIdentity.on('close', () => {window.location.reload(false)});
+        netlifyIdentity.open();
+      }
+      else {
+        netlifyIdentity.logout();
+        window.location.reload(false);
+      }
     }
   }
+  
 
 
 return (
@@ -67,7 +71,7 @@ return (
 
                     <ul>
                         <li id='top_login'>
-                          <div class='white_text pointer' onClick={handleLogin}>{netlifyIdentity.currentUser() !== null ? "Logout" : "Login"}</div>
+                          <div class='white_text pointer' onClick={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
                         </li>
                         <li>
                             <a href='/dashboard'>Dashboard</a>
