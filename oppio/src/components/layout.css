@@ -16,6 +16,12 @@ html {
 .shown {
   display: block;
 }
+.white_text {
+  color: ghostwhite;
+}
+.pointer {
+  cursor: pointer;
+}
 #test {
   color: black;
 }

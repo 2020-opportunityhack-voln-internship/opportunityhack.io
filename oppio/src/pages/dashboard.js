@@ -16,11 +16,15 @@ var user_full_name = "";
 var user_img_url = "";
 var user_created = "";
 var user;
+var netlifyIdentity = null;
+
+
 
   if (typeof window !== `undefined`) {
-    const netlifyIdentity = require('netlify-identity-widget');
+    netlifyIdentity = require('netlify-identity-widget');
     netlifyIdentity.init({});
     user = netlifyIdentity.currentUser();
+
     if(netlifyIdentity.currentUser() !== null){
       user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
       user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
@@ -28,6 +32,16 @@ var user;
     }
   }
 
+  function handleLogin(){
+    if(netlifyIdentity.currentUser() === null){
+      netlifyIdentity.on('close', () => {window.location.reload(false)});
+      netlifyIdentity.open();
+    }
+    else {
+      netlifyIdentity.logout();
+      window.location.reload(false);
+    }
+  }
 
 
 return (
@@ -53,7 +67,7 @@ return (
 
                     <ul>
                         <li id='top_login'>
-                            <div data-netlify-identity-button></div>
+                          <div class='white_text pointer' onClick={handleLogin}>{netlifyIdentity.currentUser() !== null ? "Logout" : "Login"}</div>
                         </li>
                         <li>
                             <a href='/dashboard'>Dashboard</a>
@@ -72,11 +86,7 @@ return (
                 <div id='logged_out_wrap'>
                     <h1 class='dash_welcome'>Welcome.</h1>
                     <p class='dash_login_message'>Looks like you aren't logged in. Please sign in to use the dashboard.</p>
-                    <div data-netlify-identity-button id='dash_login_btn'></div>
-                    <center>
-                      <br></br>
-                      <p>If you already signed in, <a href='/dashboard'>reload the page</a></p>
-                    </center>
+                    <div class='white_text pointer' onClick={handleLogin} id='dash_login_btn'>Login</div>
                 </div>
                 
                 : 
