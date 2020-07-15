@@ -15,25 +15,21 @@ export default ({ data }) => {
 var user_full_name = "";
 var user_img_url = "";
 var user_created = "";
-var user;
 var netlifyIdentity = null;
 
+if (typeof window !== `undefined`) {
+  netlifyIdentity = require('netlify-identity-widget');
+  netlifyIdentity.init({});
 
-
-  if (typeof window !== `undefined`) {
-    netlifyIdentity = require('netlify-identity-widget');
-    netlifyIdentity.init({});
-
-    if(netlifyIdentity.currentUser() !== null){
-      user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
-      user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
-      user_created = netlifyIdentity.currentUser().created_at;
-    }
-    
+  if(netlifyIdentity.currentUser() !== null){
+    user_img_url = netlifyIdentity.currentUser().user_metadata.avatar_url;
+    user_full_name = netlifyIdentity.currentUser().user_metadata.full_name;
+    user_created = netlifyIdentity.currentUser().created_at;
   }
+}
 
-  function handleLogin(){
-    netlifyIdentity = require('netlify-identity-widget');
+function handleLogin(){
+  netlifyIdentity = require('netlify-identity-widget');
     if(netlifyIdentity){
       if(user_full_name === ""){
         netlifyIdentity.on('close', () => {window.location.reload(false)});
@@ -63,22 +59,22 @@ return (
 
     {/* NAV */}
     <div class='topnav'>
-                    <div class='logo_wrapper'>
-                        <a href='/'>
-                            <img class='logo_image_nav' src={TopNavLogo}></img>
-                        </a>
-                    </div>
+      <div class='logo_wrapper'>
+        <a href='/'>
+          <img class='logo_image_nav' src={TopNavLogo}></img>
+        </a>
+      </div>
 
-                    <ul>
-                        <li id='top_login'>
-                          <div class='white_text pointer' onClick={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
-                        </li>
-                        <li>
-                            <a href='/dashboard'>Dashboard</a>
-                        </li>
-                    </ul>
+      <ul>
+        <li id='top_login'>
+          <div class='white_text pointer' onClick={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
+        </li>
+        <li>
+          <a href='/dashboard'>Dashboard</a>
+          </li>
+      </ul>
 
-                </div>
+    </div>
 
     {/* END OF NAV */}
 
