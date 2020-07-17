@@ -1,13 +1,8 @@
 import React from "react"
-import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import Footer from "../components/footer"
 import "../components/layout.css"
-import Img from "gatsby-image"
-import { GoogleLogin } from 'react-google-login';
 import TopNav from "../components/topnav"
-import netlifyIdentity from 'netlify-identity-widget'
 
 export default ({ data }) => {
 
