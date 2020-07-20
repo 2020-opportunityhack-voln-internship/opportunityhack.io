@@ -19,6 +19,9 @@ html {
 .white_text {
   color: ghostwhite;
 }
+.black_text {
+  color: #181818;
+}
 .pointer {
   cursor: pointer;
 }
@@ -51,10 +54,10 @@ li {
   position: fixed;
   top: 0px;
   left: 0;
-  box-shadow: 1px 2px 5px #141414;
+  box-shadow: 1px 2px 5px #2565ae;
   opacity: 1;
   z-index: 3;
-  background-color: #24292e;
+  background-color: #0f5298;
 }
 .small_border {
   width: 100px;
@@ -172,7 +175,7 @@ li {
   text-align: center;
   position: relative;
   word-wrap: normal;
-  font-weight: lighter;
+  font-weight: normal;
   color: ghostwhite;
 }
 .detail_html {
@@ -234,23 +237,23 @@ li {
     margin-top: 5px;
     width: auto;
     text-align: center;
-    background-color: #00ad9F;
+    background-color: #66d3fa;
     line-height: 40px;
     border-radius: 4px;
-    border: 2px solid #007a70;
+    border: 2px solid #019cde;
     font-size: 16px;
     font-weight: bolder;
     padding: 0 10px;
 }
 .topnav ul li a {
-  color: white;
+  color: #181818;
   text-decoration: none;
 }
 .logout_btn {
   background-color: #4c8bf5;
 }
 .logout_btn p {
-  color: white;
+  color: #181818;
 }
 .topnav button {
   height: 40px;
@@ -282,7 +285,7 @@ li {
   
 }
 .banner_heading {
-  font-weight: lighter;
+  font-weight: normal;
   margin: auto;
   width: auto;
   max-width: 600px;
@@ -304,18 +307,22 @@ li {
   word-wrap: normal;
 }
 #banner_1 {
-  background-color: rgb(255, 104, 104);
+  background-color: #019cde;
+
 }
 #banner_2 {
   background-color: #5c5cbd;
 }
 #banner_3 {
-  background-color: #24292e;
+  background-color: #64afa5;
 }
 #banner_4 {
   background-color: rgb(41, 152, 196);
 }
 #banner_5 {
+  background-color: #019cde;
+}
+#banner_6 {
   background-color: rgb(67, 194, 124);
 }
 #heroku_logo {
@@ -791,6 +798,11 @@ li {
   padding: 30px;
   text-decoration: none;
 }
+#lab_link {
+  border: 3px solid ghostwhite;
+  padding: 30px;
+  text-decoration: none;
+}
 .links_area {
   position: relative;
   margin: 30px auto 30px auto;
@@ -812,10 +824,10 @@ li {
   position: relative;
   margin-top: 90px;
 }
-#dash_banner {
+#dash_banner {  
   width: 100%;
   height: auto;
-  background-color: #2c2d2e;
+  background-color: #019cde;
   padding-top: 30px;
   margin-bottom: 50px;
 }
@@ -846,11 +858,11 @@ li {
   margin-left: 50%;
   transform: translateX(-50%);
   width: 200px;
-  background-color: #00ad9F;
+  background-color: #019cde;
   text-align: center;
   padding: 20px 0;
   font-family: sans-serif;
-  border: 2px solid #007a70;
+  border: 2px solid #66d3fa;
   border-radius: 4px;
 }
 #dash_login_btn a {
@@ -904,8 +916,8 @@ li {
   width: auto;
   height: 100px;
   padding: 0;
-  background-color: #00ad9F;
-  border: 2px solid #007a70;
+  background-color: #019cde;
+  border: 2px solid #66d3fa;
   position: relative;
 }
 .service:hover{
@@ -936,7 +948,7 @@ li {
   width: auto;
   padding: 0px 20px;
   color: ghostwhite;
-  background-color: #007a70;
+  background-color: #2565ae;
   outline: none;
   border: none;
   cursor: pointer;
@@ -951,7 +963,7 @@ li {
   width: auto;
   padding: 5px 10px;
   color: ghostwhite;
-  background-color: #007a70;
+  background-color: #2565ae;
   outline: none;
   border: none;
   cursor: pointer;

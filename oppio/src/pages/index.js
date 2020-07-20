@@ -29,13 +29,13 @@ return (
   
   {/* TOP BANNER OF HOMEPAGE */}
   <div id='homepage_banner'>
-    <img class='banner_img_under' src='./bi.jpeg'></img>
-    <div id='inner_banner'>
+    <img class='banner_img_under' src='./banner_2.jpg'></img>
+    {/* <div id='inner_banner'>
       <div class='blur_banner'></div>
         <img class='banner_img_over' src='./square_w.png'></img>
         <p id='banner_scroll_btn' onClick={() =>
           window.scroll({top: document.querySelector('#tool_section').offsetTop - 50})}>See our tools</p>
-      </div>
+      </div> */}
   </div>
   {/* END OF BANNER */}
 
@@ -155,8 +155,19 @@ return (
 
   </div>
 
-  {/* BANNER 5. Donation banner. */}
-  <div id='banner_5' class='info_banner'>
+    {/* BANNER 5. Research lab banner. */}
+    <div id='banner_5' class='info_banner'>
+    <h1 class='banner_heading'>Research Labs!</h1>
+    <div class='small_border white'></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
+    <br></br>
+    <a class='banner_link' id='lab_link' href='/research'>Go there</a><br></br>
+    </p>
+  </div>
+  {/* END OF BANNER 5 */}
+
+  {/* BANNER 6. Donation banner. */}
+  <div id='banner_6' class='info_banner'>
     <h1 class='banner_heading'>Donations are your opportunity to contribute!</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
@@ -171,7 +182,7 @@ return (
 
     </p>
   </div>
-  {/* END OF BANNER 5 */}
+  {/* END OF BANNER 6 */}
   
   {/* FOOTER. Already has a react component. */}
   <div class='footer'>

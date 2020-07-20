@@ -67,7 +67,7 @@ return (
 
       <ul>
         <li id='top_login'>
-          <div class='white_text pointer' onClick={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
+          <div class='black_text pointer' onClick={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
         </li>
         <li>
           <a href='/dashboard'>Dashboard</a>
