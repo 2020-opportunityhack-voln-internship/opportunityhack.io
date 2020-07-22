@@ -11,7 +11,6 @@ import TopNavLogo from "../images/Logos/White/cropped_w.png"
 
 export default ({ data }) => {
 
-
 var user_full_name = "";
 var user_img_url = "";
 var user_created = "";
@@ -42,8 +41,6 @@ function handleLogin(){
     }
   }
   
-
-
 return (
   <body>
     
@@ -58,23 +55,7 @@ return (
     {/* END OF HELMET */}
 
     {/* NAV */}
-    <div class='topnav'>
-      <div class='logo_wrapper'>
-        <a href='/'>
-          <img class='logo_image_nav' src={TopNavLogo}></img>
-        </a>
-      </div>
-
-      <ul>
-        <li id='top_login'>
-          <div class='white_text pointer' onClick={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
-        </li>
-        <li>
-          <a href='/dashboard'>Dashboard</a>
-          </li>
-      </ul>
-
-    </div>
+    <TopNav></TopNav>
 
     {/* END OF NAV */}
 
@@ -99,7 +80,7 @@ return (
                     <div  class='dash_head_info'>
                       <img class='user_img' src={user_img_url || DefaultImg}></img>
                       <p class='valid_username'>{user_full_name || "Guest"}</p>
-                      <p class='create_date'>Created {user_created || "sometime"}</p>
+                      <p class='create_date'>Created {user_created.substring(0,10) || "sometime"}</p>
                     </div>
                     </div>
                     </center>

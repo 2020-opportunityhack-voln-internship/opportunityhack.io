@@ -132,12 +132,14 @@ return (
       {/* End of Github link generation. */}
 
       {/* Generate Heroku link if the string is not empty. */}
+      {/*
       <a href={node.frontmatter.heroku_link} class={node.frontmatter.heroku_link === "" ? 'hidden' : 'shown'}>
       <div class='heroku_link_element'>
           <img src='https://brand.heroku.com/static/media/heroku-logotype-vertical.f7e1193f.svg'></img>
           <p>View Heroku</p>
       </div>
       </a>
+      */}
       {/* End of Heroku link generation. */}
 
       </div>

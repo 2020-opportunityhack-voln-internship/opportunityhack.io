@@ -970,8 +970,10 @@ li {
   height: 40px;
   margin-left: 35px;
   margin-top: 20px;
-  box-shadow: 0 0 2px dimgray;
-  background-color: white;
+  display: inline-block;
+}
+.github_mini_link:hover {
+  box-shadow: 0 0 5px dimgray;
 }
 .ghub_p {
   float: right;
