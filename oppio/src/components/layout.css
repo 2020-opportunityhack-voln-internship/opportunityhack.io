@@ -54,10 +54,10 @@ li {
   position: fixed;
   top: 0px;
   left: 0;
-  box-shadow: 1px 2px 5px #2565ae;
+  box-shadow: 1px 2px 5px #015d84;
   opacity: 1;
   z-index: 3;
-  background-color: #0f5298;
+  background-color: #015d84;
 }
 .small_border {
   width: 100px;
@@ -240,7 +240,7 @@ li {
     background-color: #66d3fa;
     line-height: 40px;
     border-radius: 4px;
-    border: 2px solid #019cde;
+    border: 2px solid #018bc5;
     font-size: 16px;
     font-weight: bolder;
     padding: 0 10px;
@@ -307,23 +307,23 @@ li {
   word-wrap: normal;
 }
 #banner_1 {
-  background-color: #019cde;
-
+  background-color: #015d84;
+;
 }
 #banner_2 {
-  background-color: #5c5cbd;
+  background-color: #0176a8;
 }
 #banner_3 {
-  background-color: #64afa5;
+  background-color: #018bc5;
 }
 #banner_4 {
-  background-color: rgb(41, 152, 196);
+  background-color: #019cde;
 }
 #banner_5 {
   background-color: #019cde;
 }
 #banner_6 {
-  background-color: rgb(67, 194, 124);
+  background-color: #018bc5;
 }
 #heroku_logo {
   width: 150px;
@@ -395,7 +395,7 @@ li {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: left;
+  justify-content: center;
 }
 #research_wrap {
   margin: auto;
@@ -778,7 +778,7 @@ li {
   margin: 0;
 }
 .footer_wrap {
-  background-color: #ff5e5e;
+  background-color: #0176a8;
   width: 100%;
   position: relative;
   height: auto;
@@ -827,7 +827,7 @@ li {
 #dash_banner {  
   width: 100%;
   height: auto;
-  background-color: #019cde;
+  background-color: #018bc5;
   padding-top: 30px;
   margin-bottom: 50px;
 }
@@ -916,8 +916,8 @@ li {
   width: auto;
   height: 100px;
   padding: 0;
-  background-color: #019cde;
-  border: 2px solid #66d3fa;
+  background-color: #018bc5;
+  border: 2px solid #019cde;
   position: relative;
 }
 .service:hover{
@@ -948,7 +948,7 @@ li {
   width: auto;
   padding: 0px 20px;
   color: ghostwhite;
-  background-color: #2565ae;
+  background-color: #015d84;
   outline: none;
   border: none;
   cursor: pointer;
@@ -963,7 +963,7 @@ li {
   width: auto;
   padding: 5px 10px;
   color: ghostwhite;
-  background-color: #2565ae;
+  background-color: #015d84;
   outline: none;
   border: none;
   cursor: pointer;
