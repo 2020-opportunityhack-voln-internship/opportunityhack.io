@@ -338,6 +338,8 @@ li {
   height: auto;
   margin: 0 auto;
   position: relative;
+  border: 2px solid white;
+  padding: 10px;
 }
 #opp_logo {
   width: 400px;
@@ -641,6 +643,7 @@ li {
   height: auto;
   margin: 0;
   padding: 20px;
+  border-top: 1px solid white;
 }
 .images_area {
   width: auto;

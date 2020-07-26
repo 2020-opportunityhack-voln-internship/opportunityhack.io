@@ -44,7 +44,7 @@ return (
     <h1 class='banner_heading'>What is OpportunityHack?</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
-    <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
+    <a class='banner_link' href='https://www.facebook.com/OpportunityHack/'>See our Facebook</a><a class='banner_link' href='https://www.ohack.org/'>Official Website</a><br></br><br></br>
     <img class='logoimg' src='./banner_w.png'></img>
     </p>
   </div>
@@ -55,8 +55,7 @@ return (
     <h1 class='banner_heading'>We use Heroku to deploy our solutions.</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
-    <a class='banner_link' href='/'>Learn more</a>
-    <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
+    <a class='banner_link' href='https://www.heroku.com/'>Learn more</a><br></br><br></br>
     <img id='heroku_logo' src='https://signup.heroku.com/assets/logo-horizontal@2x-1dc719093957394192e73258c3ed79718b3e88b1d6353e90803a044effe9f91c.png'>
     </img>
    </p>
@@ -68,9 +67,7 @@ return (
     <h1 class='banner_heading'>We believe in open-source projects.</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
-    <a class='banner_link' href='/'>Learn more</a>
-    <a class='banner_link' href='/'>Learn more</a>
-    <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
+    <a class='banner_link' href='https://github.com/'>What is GitHub?</a><br></br><br></br>
     <img id='github_logo' src={GithubLogo}></img>
    </p>
   </div>
@@ -158,7 +155,7 @@ return (
 
     {/* BANNER 5. Research lab banner. */}
     <div id='banner_5' class='info_banner'>
-    <h1 class='banner_heading'>Research Labs!</h1>
+    <h1 class='banner_heading'>Research Labs</h1>
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
     <br></br>
