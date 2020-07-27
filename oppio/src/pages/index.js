@@ -4,10 +4,10 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Footer from "../components/footer"
 import "../components/layout.css"
-import Img from "gatsby-image"
-import { GoogleLogin } from 'react-google-login';
+// import Img from "gatsby-image"
+// import { GoogleLogin } from 'react-google-login';
 import TopNav from "../components/topnav"
-import netlifyIdentity from 'netlify-identity-widget'
+// import netlifyIdentity from 'netlify-identity-widget'
 
 export default ({ data }) => {
 
@@ -29,7 +29,7 @@ return (
   
   {/* TOP BANNER OF HOMEPAGE */}
   <div id='homepage_banner'>
-    <img class='banner_img_under' src='./banner_2.jpg'></img>
+    <img class='banner_img_under' src='./banner_2.jpg' alt='home page banner'></img>
     {/* <div id='inner_banner'>
       <div class='blur_banner'></div>
         <img class='banner_img_over' src='./square_w.png'></img>
@@ -45,7 +45,7 @@ return (
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
-    <img class='logoimg' src='./banner_w.png'></img>
+    <img class='logoimg' src='./banner_w.png' alt='banner'></img>
     </p>
   </div>
   {/* END BANNER 1 */}
@@ -57,7 +57,7 @@ return (
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
     <a class='banner_link' href='/'>Learn more</a>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
-    <img id='heroku_logo' src='https://signup.heroku.com/assets/logo-horizontal@2x-1dc719093957394192e73258c3ed79718b3e88b1d6353e90803a044effe9f91c.png'>
+    <img id='heroku_logo' src='https://signup.heroku.com/assets/logo-horizontal@2x-1dc719093957394192e73258c3ed79718b3e88b1d6353e90803a044effe9f91c.png' alt='logo'>
     </img>
    </p>
   </div>
@@ -71,7 +71,7 @@ return (
     <a class='banner_link' href='/'>Learn more</a>
     <a class='banner_link' href='/'>Learn more</a>
     <a class='banner_link' href='/'>Learn more</a><br></br><br></br>
-    <img id='github_logo' src={GithubLogo}></img>
+    <img id='github_logo' src={GithubLogo} alt='logo'></img>
    </p>
   </div>
   {/* END BANNER 3 */}
@@ -126,7 +126,7 @@ return (
       {/* Generate Github Link if the string is not empty. */}
       <a href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
       <div class='github_link_element'>
-          <img src={GithubLogo}></img>
+          <img src={GithubLogo} alt='logo'></img>
           <p>View GitHub</p>
       </div>
       </a>
@@ -173,7 +173,7 @@ return (
     <div class='small_border white'></div>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
     <br></br><br></br>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
     <input type="hidden" name="cmd" value="_donations" />
     <input type="hidden" name="business" value="GM5N6JF4VFYWL" />
     <input type="hidden" name="currency_code" value="USD" />

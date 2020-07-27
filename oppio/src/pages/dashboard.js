@@ -1,13 +1,13 @@
 import React, { useCallback } from "react"
-import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
+// import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import Footer from "../components/footer"
+// import Footer from "../components/footer"
 import "../components/layout.css"
-import Img from "gatsby-image"
+// import Img from "gatsby-image"
 import TopNav from "../components/topnav"
 import DefaultImg from "../images/blue.png"
-import TopNavLogo from "../images/Logos/White/cropped_w.png"
+// import TopNavLogo from "../images/Logos/White/cropped_w.png"
 
 export default ({ data }) => {
 

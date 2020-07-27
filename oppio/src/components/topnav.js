@@ -51,7 +51,7 @@ class TopNav extends React.Component {
                 <div class='topnav'>
       <div class='logo_wrapper'>
         <a href='/'>
-          <img class='logo_image_nav' src={TopNavLogo}></img>
+          <img class='logo_image_nav' src={TopNavLogo} alt='logo'></img>
         </a>
       </div>
 
