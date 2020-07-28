@@ -10,6 +10,54 @@ html {
   padding: 0;
   position: relative;
 }
+#banner_4 img {
+  width: auto;
+  height: auto;
+  max-width: 350px;
+  border-radius: 10px;
+  margin: 5px;
+  border: 2px solid white;
+}
+#banner_6 img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+#banner_1 ul {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  font-weight: lighter;
+}
+#banner_2 ul {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  font-weight: lighter;
+  list-style-type: decimal;
+}
+.inline_banner_link {
+  color: white;
+}
+.italic {
+  font-style: italic;
+}
+#heroku_quote {
+  font-size: 30px;
+  border: 2px solid white;
+  padding: 10px;
+  font-style: italic;
+}
+#banner_1 ul li {
+  margin: 0;
+}
+#banner_2 ul li {
+  margin: 0;
+}
 .hidden {
   display: none;
 }
@@ -54,7 +102,7 @@ li {
   position: fixed;
   top: 0px;
   left: 0;
-  box-shadow: 1px 2px 5px #015d84;
+  box-shadow: 1px 2px 5px #24292e;
   opacity: 1;
   z-index: 3;
   background-color: #015d84;
@@ -172,7 +220,8 @@ li {
   margin: 10px auto 10px auto;
   padding: 20px;
   height: auto;
-  width: 80%;
+  width: auto;
+  max-width: 80%;
   text-align: center;
   position: relative;
   word-wrap: normal;

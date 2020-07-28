@@ -43,8 +43,16 @@ return (
   <div id='banner_1' class='info_banner'>
     <h1 class='banner_heading'>What is OpportunityHack?</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></br><br></br>
-    <a class='banner_link' href='https://www.facebook.com/OpportunityHack/'>See our Facebook</a><a class='banner_link' href='https://www.ohack.org/'>Official Website</a><br></br><br></br>
+    <p>At Opportunity Hack, our mission is quite simple...<br></br><br></br>
+    <ul>
+      <li>To help nonprofits and social enterprises access human capital that they haven't been able to tap into.</li>
+      <li>To help skilled professionals enable impact through their skills. </li>
+    </ul>
+    <br></br>
+    We achieve these visions by providing opportunities to talened and passionate developers who are inspired to change the world of software and business.
+    <br></br>
+    <br></br>
+    <a class='banner_link' href='https://www.facebook.com/OpportunityHack/'>Facebook Page</a><a class='banner_link' href='https://www.ohack.org/'>Official Website</a><br></br><br></br>
     <img class='logoimg' src='./banner_w.png'></img>
     </p>
   </div>
@@ -54,7 +62,19 @@ return (
   <div id='banner_2' class='info_banner'>
     <h1 class='banner_heading'>We use Heroku to deploy our solutions.</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
+    <h1 class='banner_heading' id='heroku_quote'>"Developers, teams, and businesses of all sizes use Heroku to deploy, manage, and scale apps." - Heroku.com</h1>
+    <p>The solutions developed by our teams are deployed on Heroku! Here are the steps you take get started:
+    <br></br>
+    <br></br>
+    <ul>
+      <li>Create an account on opportunityhack.io</li>
+      <li>Use our <a href='/dashboard/' class='inline_banner_link'>dashboard</a> to find the right solutions for you or your company</li>
+      <li>Click 'Deploy' and create an instance of the software.</li>
+      <li>Stand back and watch your company grow!</li>
+    </ul>
+    <br></br>
+    Once our developers have finished and deployed a piece of software, we make it easy for your company to find and use it. It's our job!
+    <br></br><br></br>
     <a class='banner_link' href='https://www.heroku.com/'>Learn more</a><br></br><br></br>
     <img id='heroku_logo' src='https://signup.heroku.com/assets/logo-horizontal@2x-1dc719093957394192e73258c3ed79718b3e88b1d6353e90803a044effe9f91c.png'>
     </img>
@@ -66,8 +86,13 @@ return (
   <div id='banner_3' class='info_banner'>
     <h1 class='banner_heading'>We believe in open-source projects.</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
-    <a class='banner_link' href='https://github.com/'>What is GitHub?</a><br></br><br></br>
+    <p>
+    Our developers use code repositories on Github to store our available software solutions. As a client or a developer, you can see the work being done and progress being made every step of the way. If you see a Github button with that iconic cat on it, feel free to take a peek at whats happening with that software!
+    <br></br>
+    <br></br>
+    <span class='italic'>Every solution. Every commit. Every time.</span>
+    <br></br><br></br>
+    <a class='banner_link' href='https://github.com/'>What is Github?</a><br></br><br></br>
     <img id='github_logo' src={GithubLogo}></img>
    </p>
   </div>
@@ -77,8 +102,14 @@ return (
   <div id='banner_4' class='info_banner'>
     <h1 class='banner_heading'>What's happening with OpportunityHack?</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br><br></br>
-<a class='banner_link' id='org_link' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity-Hack.org</a><br></br>
+    <p>
+    Opportunity Hack supports developers at all levels of expertise. We host hackathons, competitions, and events highlighting the work and dedication of experienced developers and budding programmers alike! 
+    <br></br>
+    <br></br>
+    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91805903_2652169571677733_1586857546763730944_o.jpg?_nc_cat=106&_nc_sid=730e14&_nc_ohc=XnaTVMIf5gMAX_vhbps&_nc_oc=AQnr_6lXS9xRUzAZj_HV14y2rd6VuKSf5ZNm3FqyJKQq-ZHxBDDg6BaJDEm98QNbje8nc6XtHxCYgrlR2U2nC96p&_nc_ht=scontent-sea1-1.xx&oh=7a01d1a1ef40b51039709771ec6524d0&oe=5F43CA89'></img>
+    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91505403_2652166611678029_2355812793334104064_o.jpg?_nc_cat=101&_nc_sid=730e14&_nc_ohc=bcQyRo8W9IYAX-8t5uJ&_nc_ht=scontent-sea1-1.xx&oh=2d3cf6a0c00d5c16bba94af6b13be3d9&oe=5F468459'></img>
+    <br></br><br></br>
+    <a class='banner_link' id='org_link' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity Hack Website</a><br></br>
     <br></br>
     </p>
   </div>
@@ -157,9 +188,16 @@ return (
     <div id='banner_5' class='info_banner'>
     <h1 class='banner_heading'>Research Labs</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
+    <p>
+    Opportunity Hack doesn't just make software solutions for non-profits, we participate in software research as well! Our volunteer developers work on research projects in various aspects of the tech world such as social media and analysis of data. Want to learn more? 
     <br></br>
-    <a class='banner_link' id='lab_link' href='/research'>Go there</a><br></br>
+    <br></br>
+    <span class='italic'>
+    Click the button below to see what we are working on!
+    </span>
+    <br></br>
+    <br></br>
+    <a class='banner_link' id='lab_link' href='/research'>Research Lab</a><br></br>
     </p>
   </div>
   {/* END OF BANNER 5 */}
@@ -168,7 +206,9 @@ return (
   <div id='banner_6' class='info_banner'>
     <h1 class='banner_heading'>Donations are your opportunity to contribute!</h1>
     <div class='small_border white'></div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br></br>
+    <p>
+    Want to invest in the development of free and open-source software for small businesses and non-profits? Use our secure PayPal tool to donate! Everyone at Opportunity Hack sends their appreciation to all donors!
+    <br></br>
     <br></br><br></br>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_donations" />
@@ -176,6 +216,8 @@ return (
     <input type="hidden" name="currency_code" value="USD" />
     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
+    <br></br><br></br>
+    <img src='https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png'></img>
 </form>
 
     </p>
