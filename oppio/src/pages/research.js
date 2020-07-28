@@ -15,14 +15,14 @@ export default function App({data}) {
   const renderSlides = () =>
     [B1,B2,B3,B4].map(num => (
       <div>
-	 <img class='banner_img_under' src={num} alt='home page banner'></img>
+	 <img src={num} alt='home page banner'></img>
       </div>
     ));
 
   return (
 <React.Fragment>
     <div className="App">
-      <Slider dots={true}>{renderSlides()}</Slider>
+      <Slider dots={true} autoplay={true} slidesToShow={1} speed={2000} autoplaySpeed= {1000}>{renderSlides()}</Slider>
     </div>
 
     <Helmet>
