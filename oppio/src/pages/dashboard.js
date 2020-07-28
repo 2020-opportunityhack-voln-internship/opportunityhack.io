@@ -1,4 +1,5 @@
-import React, { useCallback } from "react"
+// import React, { useCallback } from "react"
+import React from "react"
 // import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
@@ -70,7 +71,7 @@ return (
                 <div id='logged_out_wrap'>
                     <h1 class='dash_welcome'>Welcome.</h1>
                     <p class='dash_login_message'>Looks like you aren't logged in. Please sign in to use the dashboard.</p>
-                    <div class='white_text pointer' onClick={handleLogin} id='dash_login_btn'>Login</div>
+                    <div class='white_text pointer' role='button' tabIndex={0} onClick={handleLogin} onKeyDown={handleLogin} id='dash_login_btn'>Login</div>
                 </div>
                 
                 : 
@@ -81,7 +82,7 @@ return (
                       <h1 class='dash_title'>Welcome to the Dashboard</h1>
                       <div class='small_border white'></div>
                     <div  class='dash_head_info'>
-                      <img class='user_img' src={user_img_url || DefaultImg}></img>
+                      <img class='user_img' alt ='user_img' src={user_img_url || DefaultImg}></img>
                       <p class='valid_username'>{user_full_name || "Guest"}</p>
                       <p class='create_date'>Created {user_created.substring(0, 10) || "sometime"}</p>
                     </div>
@@ -99,7 +100,7 @@ return (
                             <a class='deploy_link' href={node.frontmatter.heroku_link}>Deploy</a>
                             {node.frontmatter.youtube_link !== "" ?
 
-                            <a href={node.frontmatter.youtube_link} class='tutorial_link' target='_blank'>TUTORIAL</a>
+                            <a href={node.frontmatter.youtube_link} class='tutorial_link' rel='noreferrer' target='_blank'>TUTORIAL</a>
                             :
                             ""
                             }
@@ -111,7 +112,7 @@ return (
                         "" :
                         <a href={node.frontmatter.github_link}>
                           <div class='github_mini_link'>
-                            <img class='github_mini' src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
+                            <img class='github_mini' alt='github_mini' src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"></img>
                             <p class='ghub_p'>View Github</p>
                           </div>
                         </a>

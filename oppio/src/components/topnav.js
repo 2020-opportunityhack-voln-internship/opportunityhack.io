@@ -4,10 +4,12 @@ import "./layout.css"
 import TopNavLogo from "../images/Logos/White/cropped_w.png"
 import "../components/layout.css"
 
+/* eslint-disable */
 var user_full_name = "";
 var user_img_url = "";
 var user_created = "";
 var netlifyIdentity = null;
+/* eslint-enable */
 
 if (typeof window !== `undefined`) {
   netlifyIdentity = require('netlify-identity-widget');
@@ -57,7 +59,7 @@ class TopNav extends React.Component {
 
       <ul>
         <li id='top_login'>
-          <div class='black_text pointer' onClick={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
+          <div class='black_text pointer' role='button' tabIndex={0} onClick={handleLogin} onKeyDown={handleLogin}>{user_full_name !== "" ? "Logout" : "Login"}</div>
         </li>
         <li>
           <a href='/dashboard'>Dashboard</a>

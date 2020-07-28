@@ -32,7 +32,7 @@ export default ({ data }) => {
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
               </p>
               <center>
-                <a id='banner_link' onClick={() => 
+                <a id='banner_link' href="/#" onClick={() => 
                   window.scroll({top: document.querySelector('#banner_3').offsetTop - 50})}>View tutorial</a>
               </center>
               <br></br><br></br>
@@ -66,7 +66,7 @@ export default ({ data }) => {
             <div class='small_border white'></div>
             <br></br>
             {
-              post.frontmatter.youtube_link === "" ? <p>We're sorry, there is no tutorial for this software yet. Stay tuned.</p> : <center><iframe class='embed_video' src={post.frontmatter.youtube_link} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture, fullscreen" allowfullscreen></iframe></center>
+              post.frontmatter.youtube_link === "" ? <p>We're sorry, there is no tutorial for this software yet. Stay tuned.</p> : <center><iframe class='embed_video' title='video' src={post.frontmatter.youtube_link} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture, fullscreen" allowfullscreen></iframe></center>
             }
             <br></br>
           </div>

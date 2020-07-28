@@ -42,10 +42,10 @@ const Footer = () => (
           <div class='small_border white'></div>
             <center>
               <div class='links_area'>
-                <a href={data.site.siteMetadata.facebook_link} class="fa fa-facebook"></a>
-                <a href={data.site.siteMetadata.twitter_link} class="fa fa-twitter"></a>
-                <a href={data.site.siteMetadata.linkedin_link} class="fa fa-linkedin"></a>
-                <a href={data.site.siteMetadata.github_link} class="fa fa-github"></a>
+                <a href={data.site.siteMetadata.facebook_link} class="fa fa-facebook" target="_blank" rel='noreferrer' aria-label="facebook link"> </a>
+                <a href={data.site.siteMetadata.twitter_link} class="fa fa-twitter" target="_blank" rel='noreferrer' aria-label="twitter link"> </a>
+                <a href={data.site.siteMetadata.linkedin_link} class="fa fa-linkedin" target="_blank" rel='noreferrer' aria-label="linkedin link"> </a>
+                <a href={data.site.siteMetadata.github_link} class="fa fa-github" target="_blank" rel='noreferrer' aria-label="github link"> </a>
               </div>
             </center>
             {/* End of footer element and social media links */}
