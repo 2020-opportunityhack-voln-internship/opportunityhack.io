@@ -47,6 +47,7 @@ module.exports = {
       email_address: ``,
   },
   plugins: [
+`gatsby-plugin-netlify-cms`,
       {
           resolve: `gatsby-source-filesystem`,
           options: {
