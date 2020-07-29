@@ -4,16 +4,32 @@ import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Footer from "../components/footer"
 import "../components/layout.css"
+import B1 from "../../static/banner_1.jpg";
+import B2 from "../../static/banner_2.jpg";
+import B3 from "../../static/banner_3.jpg";
 // import Img from "gatsby-image"
 // import { GoogleLogin } from 'react-google-login';
 import TopNav from "../components/topnav"
 // import netlifyIdentity from 'netlify-identity-widget'
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
-export default ({ data }) => {
-
+export default function App({data}) {
+  const renderSlides = () =>
+    [B1,B2,B3].map(num => (
+      <div>
+    <img class='slides' src={num} alt='home page banner'></img>
+      </div>
+    ));
+  
 return (
-  <body>
-    
+  <React.Fragment>
+      <body>
+    <div className="App">
+    <Slider dots={true} autoplay={true} slidesToShow={1} speed={5000} autoplaySpeed= {500}>{renderSlides()}</Slider>
+    </div>
+
     {/* HELMET. This is where elements are injected into the head tag */}
     <Helmet>
       <title>OpportunityHack</title>
@@ -21,23 +37,17 @@ return (
       <meta name="google-signin-client_id" content="275198785754-2qtchf3m7l14iper2iorstghppp4rv8l.apps.googleusercontent.com"/>
     
     </Helmet>
-    {/* END OF HELMET */}
-
-    {/* NAV */}
     <TopNav />
-    {/* END OF NAV */}
-  
-  {/* TOP BANNER OF HOMEPAGE */}
-  <div id='homepage_banner'>
-    <img class='banner_img_under' src='./banner_2.jpg' alt='home page banner'></img>
+
+    {/* <div id='homepage_banner'> */}
+    {/* <img class='banner_img_under' src='./banner_2.jpg' alt='home page banner'></img> */}
     {/* <div id='inner_banner'>
       <div class='blur_banner'></div>
         <img class='banner_img_over' src='./square_w.png'></img>
         <p id='banner_scroll_btn' onClick={() =>
           window.scroll({top: document.querySelector('#tool_section').offsetTop - 50})}>See our tools</p>
       </div> */}
-  </div>
-  {/* END OF BANNER */}
+  {/* </div> */}
 
   {/* BANNER 1. About OppHack */}
   <div id='banner_1' class='info_banner'>
@@ -192,7 +202,7 @@ return (
   {/* End of Footer. */}
 
   </body>
-  
+  </React.Fragment>
 )
 }
 

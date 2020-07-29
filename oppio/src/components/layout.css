@@ -159,14 +159,14 @@ li {
   color: ghostwhite;
 }
 .info_banner {
-  padding: 10px;
+  /* padding: 10px; */
   padding-bottom: 20px;
   margin: 0;
   width: 100%;
   height: auto;
   top: 43px;
   position: relative;
-  border-top: 1px solid white;
+  /* border-top: 1px solid white; */
 }
 .info_banner p {
   margin: 10px auto 10px auto;
@@ -1022,7 +1022,7 @@ li {
 body {
   margin: 0;
   position: relative;
-  background-color: ghostwhite;
+  background-color: ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1236,7 +1236,7 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
 }
 h1 {
   margin-left: 0;

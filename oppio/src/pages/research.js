@@ -22,7 +22,7 @@ export default function App({data}) {
   return (
 <React.Fragment>
     <div className="App">
-      <Slider dots={true} autoplay={true} slidesToShow={1} speed={2000} autoplaySpeed= {1000}>{renderSlides()}</Slider>
+      <Slider dots={true} autoplay={true} slidesToShow={1} speed={5000} autoplaySpeed= {500}>{renderSlides()}</Slider>
     </div>
 
     <Helmet>
