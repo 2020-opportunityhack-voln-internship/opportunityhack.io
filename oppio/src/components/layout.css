@@ -10,6 +10,54 @@ html {
   padding: 0;
   position: relative;
 }
+#banner_4 img {
+  width: auto;
+  height: auto;
+  max-width: 350px;
+  border-radius: 10px;
+  margin: 5px;
+  border: 2px solid white;
+}
+#banner_6 img {
+  width: auto;
+  height: auto;
+  max-width: 200px;
+  border-radius: 10px;
+  margin: 5px;
+}
+#banner_1 ul {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  font-weight: lighter;
+}
+#banner_2 ul {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+  width: 60%;
+  font-weight: lighter;
+  list-style-type: decimal;
+}
+.inline_banner_link {
+  color: white;
+}
+.italic {
+  font-style: italic;
+}
+#heroku_quote {
+  font-size: 30px;
+  border: 2px solid white;
+  padding: 10px;
+  font-style: italic;
+}
+#banner_1 ul li {
+  margin: 0;
+}
+#banner_2 ul li {
+  margin: 0;
+}
 .hidden {
   display: none;
 }
@@ -166,7 +214,7 @@ li {
   height: auto;
   top: 43px;
   position: relative;
-  /* border-top: 1px solid white; */
+  border-top: 1px solid white;
 }
 .info_banner p {
   margin: 10px auto 10px auto;
@@ -641,6 +689,7 @@ li {
   height: auto;
   margin: 0;
   padding: 20px;
+  border-top: 1px solid white;
 }
 .images_area {
   width: auto;
@@ -824,6 +873,7 @@ li {
 #logged_out_wrap {
   position: relative;
   margin-top: 90px;
+  background-color: white;
 }
 #dash_banner {  
   width: 100%;
@@ -883,6 +933,7 @@ li {
   margin-top: 0px;
   margin: 0;
   padding: 0;
+  background-color: white;
 }
 .dash_title {
   font-weight: lighter;
