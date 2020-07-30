@@ -50,13 +50,15 @@ export default ({ data }) => {
             <div class='small_border white'></div>
             <br></br>
             {
-              (post.frontmatter.features).map((data) =>
+              post.frontmatter.features != null ? (post.frontmatter.features).map((data) =>
               <div class='feature_detail'>
                 <i class='material-icons'>add</i>    
                 <p>{data}</p>
               </div>
               
               )
+              :
+              <div></div>
             }
             {numFeatures === 0 ? <p>No features were added to this software.</p> : <div></div>}
             <br></br>
