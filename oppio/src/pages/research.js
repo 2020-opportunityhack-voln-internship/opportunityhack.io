@@ -94,10 +94,6 @@ export const query = graphql`
           frontmatter {
             title
             mini_description
-            features
-            github_link
-            youtube_link
-            heroku_link
           }
           fields{
             slug
