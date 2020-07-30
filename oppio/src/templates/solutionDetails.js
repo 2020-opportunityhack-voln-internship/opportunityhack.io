@@ -10,7 +10,9 @@ export default ({ data }) => {
     const post = data.markdownRemark;
     var numFeatures = 0;
     if(post != null){
-      numFeatures = post.frontmatter.features.length;
+      if(post.frontmatter.features != null){
+        numFeatures = post.frontmatter.features.length;
+      }
     }
     return (
        <div>
