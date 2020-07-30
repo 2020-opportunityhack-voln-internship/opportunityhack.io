@@ -32,7 +32,7 @@ export default ({ data }) => {
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
               </p>
               <center>
-                <a id='banner_link' href="/#" onClick={() => 
+                <a id='banner_link' onClick={() => 
                   window.scroll({top: document.querySelector('#banner_3').offsetTop - 50})}>View tutorial</a>
               </center>
               <br></br><br></br>
