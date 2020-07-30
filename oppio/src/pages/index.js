@@ -116,8 +116,10 @@ return (
     Opportunity Hack supports developers at all levels of expertise. We host hackathons, competitions, and events highlighting the work and dedication of experienced developers and budding programmers alike! 
     <br></br>
     <br></br>
+    <center>
     <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91805903_2652169571677733_1586857546763730944_o.jpg?_nc_cat=106&_nc_sid=730e14&_nc_ohc=XnaTVMIf5gMAX_vhbps&_nc_oc=AQnr_6lXS9xRUzAZj_HV14y2rd6VuKSf5ZNm3FqyJKQq-ZHxBDDg6BaJDEm98QNbje8nc6XtHxCYgrlR2U2nC96p&_nc_ht=scontent-sea1-1.xx&oh=7a01d1a1ef40b51039709771ec6524d0&oe=5F43CA89'></img>
     <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91505403_2652166611678029_2355812793334104064_o.jpg?_nc_cat=101&_nc_sid=730e14&_nc_ohc=bcQyRo8W9IYAX-8t5uJ&_nc_ht=scontent-sea1-1.xx&oh=2d3cf6a0c00d5c16bba94af6b13be3d9&oe=5F468459'></img>
+    </center>
     <br></br><br></br>
     <a class='banner_link' id='org_link' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity Hack Website</a><br></br>
     <br></br>
