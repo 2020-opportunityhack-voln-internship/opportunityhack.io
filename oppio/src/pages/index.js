@@ -150,14 +150,15 @@ return (
 
       {/* Generate feature for every element in the markdown array 'features' */}
       {
-        (node.frontmatter.features.length === 1 && node.frontmatter.features[0] === 'NONE') === true ? "" : 
+        (node.frontmatter.features) != null ?  
           (node.frontmatter.features).map((data) =>
             <div class='feature'>
               <i class='material-icons'>add</i>    
               <p>{data}</p>
             </div>
           )
-        
+          :
+          <div></div>
       }
       {/* End of feature iteration. */}
 
