@@ -7,7 +7,7 @@ public_folder: /assets
 collections:
   - name: solutions
     label: Software Solution
-    folder: src/markdown/products
+    folder: oppio/src/markdown/products
     create: true
     format: frontmatter
     fields:
@@ -20,15 +20,14 @@ collections:
         name: "features"
         widget: "list"
         allow_add: true
-        default: ["NONE"]
+        default: ['NONE']
         summary: '{{fields.feature}}'
-        fields: 
-          - {label: Feature, name: feature, widget: string}
+        field: {label: '', name: feat, widget: string}
       - { name: body, label: Body (Full Description), widget: markdown, required: true}
 
   - name: research
     label: Research
-    folder: src/markdown/research
+    folder: oppio/src/markdown/research
     create: true
     format: frontmatter
     fields:

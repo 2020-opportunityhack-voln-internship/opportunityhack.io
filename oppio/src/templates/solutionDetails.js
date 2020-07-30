@@ -8,7 +8,10 @@ import TopNav from "../components/topnav"
 export default ({ data }) => {
     /* Collect the number of features to determine logic later on page. */
     const post = data.markdownRemark;
-    var numFeatures = post.frontmatter.features.length;
+    var numFeatures = 0;
+    if(post != null){
+      numFeatures = post.frontmatter.features.length;
+    }
     return (
        <div>
           {/* HELMET. This is where elements are injected into the head tag */}
