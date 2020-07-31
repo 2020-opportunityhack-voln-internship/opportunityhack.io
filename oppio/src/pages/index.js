@@ -1,5 +1,6 @@
 import React from "react"
 import GithubLogo from "../images/GitHub-Mark-Light-120px-plus.png"
+import PaypalLogo from "../images/paypal-Logo.png"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import Footer from "../components/footer"
@@ -230,7 +231,7 @@ return (
     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
     <br></br><br></br>
-    <img src='https://cdn.pixabay.com/photo/2015/05/26/09/37/paypal-784404_1280.png'></img>
+    <img id='paypal_logo' src={PaypalLogo}></img>
 </form>
 
     </p>
