@@ -40,7 +40,7 @@ export default function App({data}) {
   {/* Research Labs Section */}
   <div id='tool_section'>
 
-  <h1 id='tool_heading'>Research Tasks</h1>
+  <h1 id='tool_heading'>Research Projects</h1>
 
   <div class='small_border gray'></div>
 

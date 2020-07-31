@@ -82,9 +82,11 @@ return (
                       <h1 class='dash_title'>Welcome to the Dashboard</h1>
                       <div class='small_border white'></div>
                     <div  class='dash_head_info'>
-                      <img class='user_img' alt ='user_img' src={user_img_url || DefaultImg}></img>
+                      <p class='valid_username' id='summary_top'>Account Summary</p>
+                      <div id='summary_bottom'>
                       <p class='valid_username'>{user_full_name || "Guest"}</p>
                       <p class='create_date'>Created {user_created.substring(0, 10) || "sometime"}</p>
+                      </div>
                     </div>
                     </div>
                     </center>

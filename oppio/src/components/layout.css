@@ -9,6 +9,7 @@ html {
   margin: 0;
   padding: 0;
   position: relative;
+  background-color: white;;
 }
 .App .slick-next  {
   margin-right: 50px;
@@ -110,7 +111,7 @@ li {
   position: fixed;
   top: 0px;
   left: 0;
-  box-shadow: 1px 2px 5px #015d84;
+  box-shadow: 1px 2px 5px #24292e;
   opacity: 1;
   z-index: 3;
   background-color: #015d84;
@@ -153,7 +154,7 @@ li {
   height: auto;
   padding: 0;
   margin: 0;
-  background-color: ghostwhite;
+  background-color: white;
   position: relative;
   top: 50px;
   left: 0;
@@ -206,7 +207,6 @@ li {
   z-index: 5;
   cursor: pointer;
   margin: auto;
-  font-weight: lighter;
   font-size: 18px;
   width: 200px;
   text-align: center;
@@ -241,6 +241,7 @@ li {
 }
 .detail_header {
   color: #29242e;
+  background-color: white;
 }
 .google_btn {
   position: relative;
@@ -299,7 +300,6 @@ li {
     border-radius: 4px;
     border: 2px solid #018bc5;
     font-size: 16px;
-    font-weight: bolder;
     padding: 0 10px;
 }
 .topnav ul li a {
@@ -326,7 +326,6 @@ li {
   margin: 10px 10px;
   cursor: pointer;
   text-decoration: underline;
-  font-weight: lighter;
 }
 .banner_link:hover {
   color: rgb(0, 217, 255);
@@ -338,7 +337,6 @@ li {
   margin: 10px 10px;
   cursor: pointer;
   text-decoration: underline;
-  font-weight: lighter;
   
 }
 .banner_heading {
@@ -353,19 +351,17 @@ li {
   word-wrap: normal;
 }
 #tool_heading {
-  font-weight: lighter;
   margin: auto;
   width: auto;
   max-width: 600px;
   text-align: center;
-  color: #141414;
+  color: #24292e;
   padding: 10px;
-  font-size: 54px;
+  font-size: 35px;
   word-wrap: normal;
 }
 #banner_1 {
   background-color: #015d84;
-;
 }
 #banner_2 {
   background-color: #0176a8;
@@ -422,12 +418,12 @@ li {
 
 .research {
   width: 800px;
-  height: 200px;
+  height: auto;
   display: inline-block;
   margin: 10px;
   position: relative;
   border: 1px solid #e0e0e0;
-  min-width: 350px;
+  min-width: 300px;
   max-width: 3500px;
   padding-bottom: 20px;
   border-radius: 0px;
@@ -436,7 +432,6 @@ li {
 .soln_desc {
   text-align: left;
   width: auto;
-  font-weight: lighter;
   font-size: 16px;
   margin: 5px auto;
 }
@@ -462,13 +457,11 @@ li {
   justify-content: center;
 }
 .soln_logo {
-  background-color: ghostwhite;
   padding: 20px 0;
 }
 .soln_title {
   text-align: center;
   width: 100%;
-  font-weight: lighter;
   font-size: 30px;
   margin: 0px auto;
   line-height: 40px;
@@ -513,7 +506,6 @@ li {
   float: right;
   margin: 0;
   padding: 10px;
-  font-weight: lighter;
   font-size: 16px;
   line-height: 30px;
 }
@@ -551,7 +543,6 @@ li {
   float: right;
   margin: 0;
   padding: 10px;
-  font-weight: lighter;
   font-size: 16px;
   line-height: 30px;
   text-align: left;
@@ -566,7 +557,6 @@ li {
   text-decoration: underline;
   width: 100px;
   font-family: sans-serif;
-  font-weight: lighter;
 }
 .learn_more_link:hover {
   color: #0c59a5;
@@ -655,6 +645,7 @@ li {
   margin: 0 auto;
   padding: 0px 0;
   min-height: calc(100vh - 100px);
+  background-color: white;
 }
 #banner_link:hover {
   color: rgb(128, 151, 255);
@@ -846,9 +837,8 @@ li {
   height: auto;
   padding: 20px 0 0 0;
   color: ghostwhite;
-  font-weight: lighter;
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
 }
 #org_link {
   border: 3px solid ghostwhite;
@@ -873,7 +863,7 @@ li {
   width: 100%;
   position: relative;
   margin-top: 50px;
-  background-color: ghostwhite;
+  background-color: white;
   padding: 0px;
   margin-bottom: 0;
 }
@@ -890,7 +880,6 @@ li {
   margin-bottom: 50px;
 }
 .dash_welcome {
-  font-weight: lighter;
   font-size: 60px;
   color: #646464;
   width: 100%;
@@ -906,10 +895,20 @@ li {
 .valid_username {
   width: auto;
   padding: 0px 50px 0 50px;
-  color: white;
   text-align: center;
   font-size: 30px;
   font-weight: lighter;
+  color: #24292e;
+}
+#summary_top {
+  background-color: #24292e;
+  color: white;
+  padding: 20px 0;
+}
+#summary_bottom {
+  background-color: white;
+  margin-top: -26px;
+  padding: 30px 0 5px 0;
 }
 #dash_login_btn {
   position: relative;
@@ -943,7 +942,6 @@ li {
   background-color: white;
 }
 .dash_title {
-  font-weight: lighter;
   font-size: 50px;
   color: white;
   width: auto;
@@ -952,17 +950,17 @@ li {
   max-width: 400px;
   min-width: 300px;
   height: auto;
-  padding: 30px 10px 10px 10px;
+  padding: 20px;
   border-radius: 20px;
+  margin: 0;
 }
 .create_date {
-  color: gainsboro;
+  color: #24292e;
   font-size: 16px;
   font-weight: lighter;
   margin-top: -20px;
 }
 .category_title {
-  font-weight: lighter;
   font-size: 40px;
   color: #24292e;
   border-bottom: 1px solid gray;
@@ -989,7 +987,6 @@ li {
   line-height: 25px;
   padding: 0 20px;
   font-size: 20px;
-  font-weight: lighter;
   color: ghostwhite;
   float: left;
   left: 0;
@@ -1043,7 +1040,6 @@ li {
   height: auto;
   max-width: 80%;
   margin: 0 35px;
-  font-weight: lighter;
 }
 .bold {
   font-weight: bolder;
@@ -1075,7 +1071,6 @@ li {
   text-align: left;
   line-height: 40px;
   margin-right: 5px;
-  font-weight: lighter;
 }
 body {
   margin: 0;

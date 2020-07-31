@@ -38,7 +38,7 @@ const Footer = () => (
         {/* END OF HELMET */}
 
           {/* Social media links and bottom footer element */}
-          <h1 class='footer_heading'>Stay Connected</h1>
+          <p class='footer_heading'>Stay Connected</p>
           <div class='small_border white'></div>
             <center>
               <div class='links_area'>

@@ -52,9 +52,9 @@ return (
 
   {/* BANNER 1. About OppHack */}
   <div id='banner_1' class='info_banner'>
-    <h1 class='banner_heading'>What is OpportunityHack?</h1>
+    <h1 class='banner_heading'>What is Opportunity Hack?</h1>
     <div class='small_border white'></div>
-    <p>At Opportunity Hack, our mission is quite simple...<br></br><br></br>
+    <p>At Opportunity Hack, our mission is quite simple<br></br><br></br>
     <ul>
       <li>To help nonprofits and social enterprises access human capital that they haven't been able to tap into.</li>
       <li>To help skilled professionals enable impact through their skills. </li>
@@ -63,7 +63,7 @@ return (
     We achieve these visions by providing opportunities to talened and passionate developers who are inspired to change the world of software and business.
     <br></br>
     <br></br>
-    <a class='banner_link' href='https://www.facebook.com/OpportunityHack/'>Facebook Page</a><a class='banner_link' href='https://www.ohack.org/'>Official Website</a><br></br><br></br>
+    <a class='banner_link' target='_blank' href='https://www.facebook.com/OpportunityHack/'>Facebook Page</a><a class='banner_link' target='_blank' href='https://www.ohack.org/'>Opportunity Hack Website</a><br></br><br></br>
     <img class='logoimg' src='./banner_w.png'></img>
     </p>
   </div>
@@ -86,7 +86,7 @@ return (
     <br></br>
     Once our developers have finished and deployed a piece of software, we make it easy for your company to find and use it. It's our job!
     <br></br><br></br>
-    <a class='banner_link' href='https://www.heroku.com/'>Learn more</a><br></br><br></br>
+    <a class='banner_link' target='_blank' href='https://www.heroku.com/'>Learn more</a><br></br><br></br>
     <img id='heroku_logo' src='https://signup.heroku.com/assets/logo-horizontal@2x-1dc719093957394192e73258c3ed79718b3e88b1d6353e90803a044effe9f91c.png'>
     </img>
    </p>
@@ -103,7 +103,7 @@ return (
     <br></br>
     <span class='italic'>Every solution. Every commit. Every time.</span>
     <br></br><br></br>
-    <a class='banner_link' href='https://github.com/'>What is Github?</a><br></br><br></br>
+    <a class='banner_link' target='_blank' href='https://github.com/'>What is Github?</a><br></br><br></br>
     <img id='github_logo' src={GithubLogo}></img>
    </p>
   </div>
@@ -111,7 +111,7 @@ return (
 
   {/* BANNER 4. Opp Hack Org banner. */}
   <div id='banner_4' class='info_banner'>
-    <h1 class='banner_heading'>What's happening with OpportunityHack?</h1>
+    <h1 class='banner_heading'>What's happening with Opportunity Hack?</h1>
     <div class='small_border white'></div>
     <p>
     Opportunity Hack supports developers at all levels of expertise. We host hackathons, competitions, and events highlighting the work and dedication of experienced developers and budding programmers alike! 
@@ -122,7 +122,7 @@ return (
     <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91505403_2652166611678029_2355812793334104064_o.jpg?_nc_cat=101&_nc_sid=730e14&_nc_ohc=bcQyRo8W9IYAX-8t5uJ&_nc_ht=scontent-sea1-1.xx&oh=2d3cf6a0c00d5c16bba94af6b13be3d9&oe=5F468459'></img>
     </center>
     <br></br><br></br>
-    <a class='banner_link' id='org_link' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity Hack Website</a><br></br>
+    <a class='banner_link' id='org_link' target='_blank' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity Hack Website</a><br></br>
     <br></br>
     </p>
   </div>
@@ -146,7 +146,7 @@ return (
       <div class='soln_inner_wrap'>
       <p class='soln_desc'>{node.frontmatter.mini_description}</p>
 
-      <a class='learn_more_link' href={node.fields.slug}>Learn more</a>
+      <a class='learn_more_link' target='_blank' href={node.fields.slug}>Learn more</a>
       <br></br><br></br>
 
       {/* Generate feature for every element in the markdown array 'features' */}
@@ -166,7 +166,7 @@ return (
       <br></br>
       
       {/* Generate Github Link if the string is not empty. */}
-      <a href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
+      <a  target='_blank' href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
       <div class='github_link_element'>
           <img src={GithubLogo} alt='logo'></img>
           <p>View GitHub</p>
@@ -211,7 +211,7 @@ return (
     </span>
     <br></br>
     <br></br>
-    <a class='banner_link' id='lab_link' href='/research'>Research Lab</a><br></br>
+    <a class='banner_link' target='_blank' id='lab_link' href='/research'>Research Lab</a><br></br>
     </p>
   </div>
   {/* END OF BANNER 5 */}
