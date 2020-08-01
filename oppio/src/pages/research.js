@@ -15,7 +15,7 @@ export default function App({data}) {
   const renderSlides = () =>
     [B1,B2,B3,B4].map(num => (
       <div>
-	 <img src={num} alt='home page banner'></img>
+	      <img src={num} alt='home page banner'></img>
       </div>
     ));
 
@@ -55,11 +55,11 @@ export default function App({data}) {
       <div class='soln_inner_wrap'>
       <p class='soln_desc'>{node.frontmatter.mini_description}</p>
 
-      </div>
+    </div>
 
   {/* End of research */}
 
-    </div>
+  </div>
 
   ))}
 

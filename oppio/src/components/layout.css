@@ -359,6 +359,7 @@ li {
   padding: 10px;
   font-size: 35px;
   word-wrap: normal;
+  font-weight: 300;
 }
 #banner_1 {
   background-color: #015d84;
@@ -945,6 +946,7 @@ li {
   font-size: 50px;
   color: white;
   width: auto;
+  font-weight: 300;
 }
 .dash_head_info {
   max-width: 400px;
@@ -967,6 +969,7 @@ li {
   width: auto;
   padding-bottom: 20px;
   margin: 20px 30px;
+  font-weight: 300;
 }
 .service {
   margin: 10px 30px;
@@ -974,7 +977,7 @@ li {
   height: 100px;
   padding: 0;
   background-color: #018bc5;
-  border: 2px solid #019cde;
+  border: 2px solid #015d84;
   position: relative;
 }
 .service:hover{
