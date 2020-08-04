@@ -33,4 +33,3 @@ collections:
     fields:
       - { name: title, label: Title, widget: string, required: true }
       - { name: mini_description, label: Thumbnail Description, widget: string, required: true }
-      - { name: body, label: Body (Full Description), widget: markdown, required: true}
