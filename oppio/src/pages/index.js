@@ -77,12 +77,14 @@ return (
     <p>The solutions developed by our teams are deployed on Heroku! Here are the steps you take get started:
     <br></br>
     <br></br>
+<center>
     <ul>
       <li>Create an account on opportunityhack.io</li>
       <li>Use our <a href='/dashboard/' class='inline_banner_link'>dashboard</a> to find the right solutions for you or your company</li>
       <li>Click 'Deploy' and create an instance of the software.</li>
       <li>Stand back and watch your company grow!</li>
     </ul>
+</center>
     <br></br>
     Once our developers have finished and deployed a piece of software, we make it easy for your company to find and use it. It's our job!
     <br></br><br></br>
