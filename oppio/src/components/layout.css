@@ -44,7 +44,7 @@ html {
   text-align: left;
   margin: 0 auto;
   padding: 0;
-  width: 60%;
+  width: auto;
   font-weight: lighter;
   list-style-type: decimal;
 }
