@@ -1,6 +1,6 @@
 ---
 title: "Data Analysis"
-mini_description: "TIpsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Nisl tincidunt eget nullam non nisi. Volutpat commodo sed egestas egestas fringilla phasellus. Pharetra sit amet aliquam id diam maecenas. TIpsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Nisl tincidunt eget nullam non nisi. Volutpat commodo sed egestas egestas fringilla phasellus. Pharetra sit amet aliquam id diam maecenas."
+mini_description: "For Opportunity Hack 2019, RealTimeSTEAM was looking for a way to analyze data on the web in order to provide their own staff, along with teachers and parents a better way to introduce STEAM concepts to children. If there was a way to intersect popular culture with science and technology, as these things evolve, it would provide new educational ideas."
 image: "./blue3.png"
 features: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor']
 
