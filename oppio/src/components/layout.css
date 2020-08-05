@@ -42,12 +42,11 @@ html {
 }
 #banner_2 ul {
   text-align: left;
-  margin: auto;
+  margin: 0 auto;
   padding: 0;
-  width: auto;
+  width: 300px;
   font-weight: lighter;
   list-style-type: decimal;
-  border: 1px solid white;
 }
 .inline_banner_link {
   color: white;
