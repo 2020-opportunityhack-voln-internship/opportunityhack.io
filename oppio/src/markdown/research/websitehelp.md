@@ -1,6 +1,6 @@
 ---
 title: "Website Help"
-mini_description: "TIpsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Nisl tincidunt eget nullam non nisi. Volutpat commodo sed egestas egestas fringilla phasellus. Pharetra sit amet aliquam id diam maecenas."
+mini_description: "Create (free/trial) accounts and document your analysis of the various options available for non-profits to use. Instead of surgically repairing various websites, we would instead like to recommend a platform that non-profits can use. We'd then use Opportunity Hack to work with them to move their content to this platform that you recommend."
 image: "./blue3.png"
 features: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc sed velit dignissim sodales ut eu.']
 

@@ -7,7 +7,7 @@ import { graphql } from "gatsby"
 import "../components/layout.css"
 // import Img from "gatsby-image"
 import TopNav from "../components/topnav"
-import DefaultImg from "../images/blue.png"
+// import DefaultImg from "../images/blue.png"
 // import TopNavLogo from "../images/Logos/White/cropped_w.png"
 
 export default ({ data }) => {

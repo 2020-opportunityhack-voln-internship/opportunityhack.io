@@ -1,6 +1,6 @@
 ---
 title: "Social Media Help"
-mini_description: "TIpsum dolor sit amet consectetur adipiscing elit pellentesque habitant. Faucibus vitae aliquet nec ullamcorper sit amet risus nullam. Nisl tincidunt eget nullam non nisi. Volutpat commodo sed egestas egestas fringilla phasellus. Pharetra sit amet aliquam id diam maecenas."
+mini_description: "Social media for NGOs offers a great chance to present their work to the outside world and to get into contact with their supporters, their beneficiaries and other people interested in their work. Opportunity Hack helps you create social media accounts and analyze various options available for non-profits."
 image: "./blue3.png"
 features: ['Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Curabitur vitae nunc sed velit dignissim sodales ut eu.']
 

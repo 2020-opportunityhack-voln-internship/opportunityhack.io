@@ -63,8 +63,8 @@ return (
     We achieve these visions by providing opportunities to talened and passionate developers who are inspired to change the world of software and business.
     <br></br>
     <br></br>
-    <a class='banner_link' target='_blank' href='https://www.facebook.com/OpportunityHack/'>Facebook Page</a><a class='banner_link' target='_blank' href='https://www.ohack.org/'>Opportunity Hack Website</a><br></br><br></br>
-    <img class='logoimg' src='./banner_w.png'></img>
+    <a class='banner_link' rel="noreferrer" target='_blank' href='https://www.facebook.com/OpportunityHack/'>Facebook Page</a><a class='banner_link' rel="noreferrer" target='_blank' href='https://www.ohack.org/'>Opportunity Hack Website</a><br></br><br></br>
+    <img class='logoimg' alt="Banner" src='./banner_w.png'></img>
     </p>
   </div>
   {/* END BANNER 1 */}
@@ -88,8 +88,8 @@ return (
     <br></br>
     Once our developers have finished and deployed a piece of software, we make it easy for your company to find and use it. It's our job!
     <br></br><br></br>
-    <a class='banner_link' target='_blank' href='https://www.heroku.com/'>Learn more</a><br></br><br></br>
-    <img id='heroku_logo' src='https://signup.heroku.com/assets/logo-horizontal@2x-1dc719093957394192e73258c3ed79718b3e88b1d6353e90803a044effe9f91c.png'>
+    <a class='banner_link' rel="noreferrer" target='_blank' href='https://www.heroku.com/'>Learn more</a><br></br><br></br>
+    <img id='heroku_logo' alt="heroku_logo" src='https://signup.heroku.com/assets/logo-horizontal@2x-1dc719093957394192e73258c3ed79718b3e88b1d6353e90803a044effe9f91c.png'>
     </img>
    </p>
   </div>
@@ -105,8 +105,8 @@ return (
     <br></br>
     <span class='italic'>Every solution. Every commit. Every time.</span>
     <br></br><br></br>
-    <a class='banner_link' target='_blank' href='https://github.com/'>What is Github?</a><br></br><br></br>
-    <img id='github_logo' src={GithubLogo}></img>
+    <a class='banner_link' rel="noreferrer" target='_blank' href='https://github.com/'>What is Github?</a><br></br><br></br>
+    <img id='github_logo' alt="github_logo" src={GithubLogo}></img>
    </p>
   </div>
   {/* END BANNER 3 */}
@@ -120,11 +120,11 @@ return (
     <br></br>
     <br></br>
     <center>
-    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91805903_2652169571677733_1586857546763730944_o.jpg?_nc_cat=106&_nc_sid=730e14&_nc_ohc=XnaTVMIf5gMAX_vhbps&_nc_oc=AQnr_6lXS9xRUzAZj_HV14y2rd6VuKSf5ZNm3FqyJKQq-ZHxBDDg6BaJDEm98QNbje8nc6XtHxCYgrlR2U2nC96p&_nc_ht=scontent-sea1-1.xx&oh=7a01d1a1ef40b51039709771ec6524d0&oe=5F43CA89'></img>
-    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91505403_2652166611678029_2355812793334104064_o.jpg?_nc_cat=101&_nc_sid=730e14&_nc_ohc=bcQyRo8W9IYAX-8t5uJ&_nc_ht=scontent-sea1-1.xx&oh=2d3cf6a0c00d5c16bba94af6b13be3d9&oe=5F468459'></img>
+    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91805903_2652169571677733_1586857546763730944_o.jpg?_nc_cat=106&_nc_sid=730e14&_nc_ohc=XnaTVMIf5gMAX_vhbps&_nc_oc=AQnr_6lXS9xRUzAZj_HV14y2rd6VuKSf5ZNm3FqyJKQq-ZHxBDDg6BaJDEm98QNbje8nc6XtHxCYgrlR2U2nC96p&_nc_ht=scontent-sea1-1.xx&oh=7a01d1a1ef40b51039709771ec6524d0&oe=5F43CA89' alt="img"></img>
+    <img src='https://scontent-sea1-1.xx.fbcdn.net/v/t1.0-9/91505403_2652166611678029_2355812793334104064_o.jpg?_nc_cat=101&_nc_sid=730e14&_nc_ohc=bcQyRo8W9IYAX-8t5uJ&_nc_ht=scontent-sea1-1.xx&oh=2d3cf6a0c00d5c16bba94af6b13be3d9&oe=5F468459' alt="img"></img>
     </center>
     <br></br><br></br>
-    <a class='banner_link' id='org_link' target='_blank' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity Hack Website</a><br></br>
+    <a class='banner_link' id='org_link' rel="noreferrer" target='_blank' href='https://sites.google.com/opportunityhack.io/opportunity-hack/home?authuser=0'>Opportunity Hack Website</a><br></br>
     <br></br>
     </p>
   </div>
@@ -148,7 +148,7 @@ return (
       <div class='soln_inner_wrap'>
       <p class='soln_desc'>{node.frontmatter.mini_description}</p>
 
-      <a class='learn_more_link' target='_blank' href={node.fields.slug}>Learn more</a>
+      <a class='learn_more_link' rel="noreferrer" target='_blank' href={node.fields.slug}>Learn more</a>
       <br></br><br></br>
 
       {/* Generate feature for every element in the markdown array 'features' */}
@@ -168,7 +168,7 @@ return (
       <br></br>
       
       {/* Generate Github Link if the string is not empty. */}
-      <a  target='_blank' href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
+      <a  target='_blank' rel="noreferrer" href={node.frontmatter.github_link} class={node.frontmatter.github_link === "" ? 'hidden' : 'shown'}>
       <div class='github_link_element'>
           <img src={GithubLogo} alt='logo'></img>
           <p>View GitHub</p>
@@ -226,14 +226,14 @@ return (
     Want to invest in the development of free and open-source software for small businesses and non-profits? Use our secure PayPal tool to donate! Everyone at Opportunity Hack sends their appreciation to all donors!
     <br></br>
     <br></br><br></br>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_donations" />
-    <input type="hidden" name="business" value="GM5N6JF4VFYWL" />
-    <input type="hidden" name="currency_code" value="USD" />
+    <form action="https://www.paypal.com/cgi-bin/webscr" rel="noreferrer" method="post" target="_blank">
+    <input type="hidden" aria-label="donations" name="cmd" value="_donations" />
+    <input type="hidden" aria-label="business" name="business" value="GM5N6JF4VFYWL" />
+    <input type="hidden" aria-label="currency_code" name="currency_code" value="USD" />
     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
     <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
     <br></br><br></br>
-    <img id='paypal_logo' src={PaypalLogo}></img>
+    <img id='paypal_logo' alt="paypal_logo" src={PaypalLogo}></img>
 </form>
 
     </p>
